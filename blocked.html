@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Focus</title>
+    <link rel="icon" href="icons/icon32.png" />
+    <link rel="stylesheet" href="ui.css" />
+  </head>
+  <body class="page">
+    <main class="card">
+      <img src="icons/icon48.png" width="40" height="40" alt="" />
+      <p id="why" class="muted"></p>
+      <h1 id="task"></h1>
+      <div id="clock"></div>
+      <p id="where" class="muted"></p>
+
+      <form id="laterForm">
+        <input id="laterInput" type="text" maxlength="200" placeholder="Ce que tu voulais y faire ? Note-le pour la pause" aria-label="Noter pour plus tard" autocomplete="off" />
+      </form>
+      <p id="noted" class="muted" hidden>Noté. Tu le retrouveras à la pause, dans la bulle de Focus.</p>
+
+      <button id="back" class="main" type="button" hidden></button>
+      <button id="need" class="link" type="button"></button>
+    </main>
+
+    <script src="shared.js"></script>
+    <script src="blocked.js"></script>
+  </body>
+</html>

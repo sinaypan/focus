@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Focus</title>
+    <link rel="stylesheet" href="ui.css" />
+  </head>
+  <body class="popup">
+    <!-- Avant la séance : les blocs, la pause, le plein écran, les sites à fermer. -->
+    <section id="setup" hidden>
+      <header>
+        <span class="title">Focus</span>
+        <span id="total" class="muted"></span>
+      </header>
+
+      <div class="card">
+        <ol id="blocks"></ol>
+        <button id="add" class="add" type="button">
+          <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8h9M8 3.5v9" /></svg>
+          Ajouter un bloc
+        </button>
+      </div>
+
+      <div class="card row">
+        <span>Pause entre les blocs</span>
+        <div id="pause" class="chips" role="radiogroup" aria-label="Durée de la pause"></div>
+      </div>
+
+      <label class="card row">
+        <span>Onglet à part, en plein écran</span>
+        <input id="fullscreen" class="switch" type="checkbox" />
+      </label>
+
+      <div class="card">
+        <label class="row">
+          <span>Fermer des sites pendant les blocs</span>
+          <input id="blocking" class="switch" type="checkbox" />
+        </label>
+        <div id="sitesPanel" hidden>
+          <div id="sites" class="chips"></div>
+          <form id="siteForm">
+            <input id="siteInput" type="text" placeholder="Ajouter un site, par exemple lequipe.fr" aria-label="Ajouter un site" autocomplete="off" spellcheck="false" />
+          </form>
+          <p id="siteError" class="error" hidden></p>
+        </div>
+      </div>
+
+      <button id="start" class="main" type="button">Lancer la séance</button>
+      <p id="day" class="muted centre" hidden></p>
+    </section>
+
+    <!-- Pendant la séance : une tâche, le temps qui reste, la suite. -->
+    <section id="run" hidden>
+      <header>
+        <span id="where" class="muted"></span>
+        <div id="track" aria-hidden="true"></div>
+      </header>
+      <div id="task"></div>
+      <div id="clock"></div>
+      <p id="next" class="muted"></p>
+
+      <form id="laterForm">
+        <input id="laterInput" type="text" maxlength="200" placeholder="Une idée, une envie ? Note-la pour la pause" aria-label="Noter pour plus tard" autocomplete="off" />
+      </form>
+      <p id="laterCount" class="muted centre" hidden></p>
+
+      <div class="actions">
+        <button id="hold" class="soft" type="button"></button>
+        <button id="skip" class="soft" type="button"></button>
+      </div>
+      <button id="stop" class="link" type="button">Arrêter la séance</button>
+    </section>
+
+    <section id="laterBox" hidden>
+      <h2>À voir plus tard</h2>
+      <ul id="later" class="card"></ul>
+    </section>
+
+    <!-- Un souci signalé par le fond, à lire et à recopier tel quel. -->
+    <p id="trouble" class="error" hidden></p>
+
+    <script src="shared.js"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>

@@ -1,0 +1,570 @@
+:root {
+  color-scheme: light dark;
+  --bg: #ffffff;
+  --field: #f2f2f7;
+  --raised: #ffffff;
+  --text: #1c1c1e;
+  --muted: #8e8e93;
+  --accent: #0e93a8;
+  --accent-text: #ffffff;
+  --error: #c0271d;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1c1c1e;
+    --field: #2c2c2e;
+    --raised: #48484a;
+    --text: #f2f2f7;
+    --accent: #40c8e0;
+    --accent-text: #1c1c1e;
+    --error: #ff6961;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 13px/1.4 system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+
+button {
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+
+p,
+h1,
+h2,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+svg {
+  flex: none;
+  width: 16px;
+  height: 16px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+input[type='text'] {
+  width: 100%;
+  min-width: 0;
+  padding: 7px 10px;
+  border: 0;
+  border-radius: 10px;
+  outline: 0;
+  background: var(--field);
+  color: inherit;
+  font: inherit;
+}
+
+input[type='text']::placeholder {
+  color: var(--muted);
+}
+
+input[type='text']:focus-visible,
+button:focus-visible {
+  outline: 0;
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 40%, transparent);
+}
+
+.muted {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.centre {
+  text-align: center;
+}
+
+.error {
+  margin: 6px 4px 0;
+  color: var(--error);
+  font-size: 12px;
+}
+
+#trouble {
+  margin-top: 10px;
+  overflow-wrap: anywhere;
+  text-align: left;
+}
+
+.card {
+  border-radius: 12px;
+  background: var(--field);
+}
+
+.main {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border-radius: 999px;
+  background: var(--accent);
+  color: var(--accent-text);
+  font-weight: 600;
+}
+
+.soft {
+  flex: 1;
+  padding: 9px;
+  border-radius: 999px;
+  background: var(--field);
+  font-weight: 600;
+}
+
+.soft:hover {
+  background: color-mix(in srgb, var(--text) 9%, var(--field));
+}
+
+.link {
+  display: block;
+  margin: 10px auto 0;
+  padding: 2px 8px;
+  border-radius: 999px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.chips button {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: var(--raised);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.chips button[aria-checked='true'] {
+  background: color-mix(in srgb, var(--accent) 22%, var(--field));
+  color: var(--text);
+}
+
+.chips svg {
+  width: 12px;
+  height: 12px;
+  color: var(--muted);
+}
+
+/* Le temps qui reste : le seul grand chiffre de l'écran. */
+#clock {
+  font-size: 46px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -1px;
+  line-height: 1.1;
+}
+
+.held #clock {
+  color: var(--muted);
+}
+
+/* ---------- La bulle de l'icône ---------- */
+
+.popup {
+  width: 360px;
+  padding: 12px;
+}
+
+.popup header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 2px 4px 10px;
+}
+
+.title {
+  flex: 1;
+  font-weight: 700;
+}
+
+.popup .card {
+  margin-top: 8px;
+}
+
+#blocks li {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 6px 5px 12px;
+}
+
+#blocks li + li,
+#later li + li {
+  box-shadow: 0 -1px 0 color-mix(in srgb, var(--muted) 22%, transparent);
+}
+
+#blocks .n {
+  flex: none;
+  width: 10px;
+  color: var(--muted);
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+#blocks input {
+  flex: 1;
+  padding-left: 6px;
+  background: none;
+  font-weight: 600;
+  text-overflow: ellipsis;
+}
+
+#blocks input:focus-visible {
+  background: var(--raised);
+  box-shadow: none;
+}
+
+.stepper {
+  display: flex;
+  flex: none;
+  align-items: center;
+  border-radius: 999px;
+  background: var(--raised);
+}
+
+.stepper label {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 600;
+  cursor: text;
+}
+
+#blocks .stepper input {
+  flex: none;
+  width: 26px;
+  padding: 4px 0;
+  border-radius: 6px;
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+}
+
+#blocks .stepper input:focus-visible {
+  background: var(--field);
+  text-align: center;
+}
+
+.stepper button,
+.remove,
+#later button {
+  display: flex;
+  padding: 6px;
+  border-radius: 999px;
+  color: var(--muted);
+}
+
+.stepper button:hover,
+.remove:hover,
+#later button:hover {
+  color: var(--text);
+}
+
+.add {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 6px;
+  padding: 9px 12px;
+  border-radius: 0 0 12px 12px;
+  box-shadow: 0 -1px 0 color-mix(in srgb, var(--muted) 22%, transparent);
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.row {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 8px 8px 12px;
+  border-radius: 12px;
+  font-weight: 600;
+  text-align: left;
+}
+
+.row > span:first-child {
+  flex: 1;
+}
+
+label.row {
+  padding: 8px 10px 8px 12px;
+  cursor: pointer;
+}
+
+/* L'interrupteur : une case à cocher redessinée. */
+.switch {
+  position: relative;
+  flex: none;
+  width: 40px;
+  height: 24px;
+  margin: 0;
+  appearance: none;
+  border-radius: 999px;
+  outline: 0;
+  background: color-mix(in srgb, var(--muted) 45%, var(--field));
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.switch::after {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  content: '';
+  transition: transform 0.15s;
+}
+
+.switch:checked {
+  background: var(--accent);
+}
+
+.switch:checked::after {
+  transform: translateX(16px);
+}
+
+.switch:focus-visible {
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 40%, transparent);
+}
+
+#sitesPanel {
+  padding: 0 10px 10px;
+}
+
+#siteForm {
+  margin-top: 8px;
+}
+
+#siteForm input {
+  background: var(--raised);
+}
+
+#start {
+  margin-top: 10px;
+}
+
+#day {
+  margin-top: 8px;
+}
+
+/* Pendant la séance */
+
+#track {
+  display: flex;
+  flex: 1;
+  gap: 4px;
+}
+
+#track i {
+  flex: 1;
+  height: 6px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--muted) 30%, var(--field));
+}
+
+#track b {
+  display: block;
+  width: 0;
+  height: 100%;
+  border-radius: 999px;
+  background: var(--accent);
+}
+
+#run {
+  text-align: center;
+}
+
+#run header {
+  margin-bottom: 14px;
+}
+
+#where {
+  white-space: nowrap;
+}
+
+#task {
+  overflow: hidden;
+  font-size: 17px;
+  font-weight: 700;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+[data-kind='pause'] #task {
+  color: var(--muted);
+}
+
+#next {
+  min-height: 17px;
+  margin-top: 2px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+#laterForm {
+  margin-top: 12px;
+}
+
+#laterForm input {
+  padding: 9px 12px;
+  border-radius: 12px;
+}
+
+#laterCount {
+  margin-top: 6px;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+/* Les notes mises de côté */
+
+#laterBox h2 {
+  margin: 14px 4px 0;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+#later {
+  max-height: 150px;
+  margin-top: 6px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--muted) transparent;
+}
+
+#later li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 6px 4px 12px;
+  text-align: left;
+}
+
+#later span {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+#later button:hover {
+  color: var(--accent);
+}
+
+/* ---------- La page qui remplace un site fermé ---------- */
+
+.page {
+  display: grid;
+  min-height: 100vh;
+  padding: 24px;
+  place-items: center;
+}
+
+.page .card {
+  width: min(400px, 100%);
+  padding: 28px 24px 20px;
+  border-radius: 14px;
+  text-align: center;
+}
+
+.page img {
+  display: block;
+  margin: 0 auto 14px;
+}
+
+.page #why {
+  font-size: 13px;
+}
+
+.page h1 {
+  margin-top: 2px;
+  overflow-wrap: anywhere;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.page #clock {
+  margin-top: 6px;
+  font-size: 64px;
+  letter-spacing: -2px;
+}
+
+.page #where {
+  min-height: 18px;
+  font-size: 13px;
+}
+
+.page #laterForm {
+  margin-top: 20px;
+}
+
+.page #laterForm input {
+  background: var(--raised);
+  text-align: center;
+}
+
+.page #noted {
+  margin-top: 8px;
+}
+
+.page .main {
+  margin-top: 20px;
+}
+
+.page .link {
+  margin-top: 14px;
+}
+
+.page.free #clock {
+  color: var(--muted);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .switch,
+  .switch::after {
+    transition: none;
+  }
+}
