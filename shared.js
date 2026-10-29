@@ -45,11 +45,14 @@ const clock = (ms) => {
   return hours ? `${hours}:${pad(minutes)}:${pad(seconds % 60)}` : `${minutes}:${pad(seconds % 60)}`;
 };
 
-// 30 → "30 min", 95 → "1 h 35"
+// 30 → "30 min", 95 → "1 h 35", dans la langue de Chrome.
 const span = (minutes) => {
   const whole = Math.round(minutes);
-  if (whole < 60) return `${whole} min`;
-  return whole % 60 ? `${Math.floor(whole / 60)} h ${String(whole % 60).padStart(2, '0')}` : `${whole / 60} h`;
+  if (whole < 60) return chrome.i18n.getMessage('spanMin', [String(whole)]);
+  const hours = String(Math.floor(whole / 60));
+  return whole % 60
+    ? chrome.i18n.getMessage('spanHoursMin', [hours, String(whole % 60).padStart(2, '0')])
+    : chrome.i18n.getMessage('spanHours', [hours]);
 };
 
 const today = () => new Date().toLocaleDateString('sv');

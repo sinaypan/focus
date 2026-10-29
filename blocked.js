@@ -25,28 +25,28 @@ const draw = () => {
   const held = Boolean(session) && !session.endsAt;
   if (!locked) cancel();
 
-  document.title = locked ? `${host} · fermé pendant le bloc` : 'Focus';
+  document.title = locked ? t('closedDuring', host) : 'Focus';
   document.body.classList.toggle('free', !locked);
   document.body.classList.toggle('held', held);
   byId('laterForm').hidden = !locked;
   byId('need').hidden = !locked;
   byId('back').hidden = locked || !host;
-  byId('back').textContent = `Retourner sur ${host}`;
+  byId('back').textContent = t('backTo', host);
   byId('clock').hidden = !session;
   if (session) byId('clock').textContent = clock(leftOf(session));
 
   if (locked) {
     const works = session.steps.filter((entry) => entry.kind === 'work');
     const position = session.steps.slice(0, session.index + 1).filter((entry) => entry.kind === 'work').length;
-    byId('why').textContent = `${host} attend la pause`;
+    byId('why').textContent = t('waitsForBreak', host);
     byId('task').textContent = step.name;
-    byId('where').textContent = held ? 'Séance suspendue' : `Bloc ${position} sur ${works.length}`;
-    byId('need').textContent = opening ? `Ouverture dans ${opening.left} s · cliquer pour annuler` : 'J’en ai besoin pour ce bloc';
+    byId('where').textContent = held ? t('sessionHeld') : t('blockOf', position, works.length);
+    byId('need').textContent = opening ? t('openingIn', opening.left) : t('needIt');
   } else {
-    byId('why').textContent = host ? `${host} est rouvert` : '';
+    byId('why').textContent = host ? t('reopened', host) : '';
     const pause = step?.kind === 'pause';
-    byId('task').textContent = pause ? 'C’est la pause' : step ? step.name : 'La séance est finie';
-    byId('where').textContent = pause && !held ? `Reprise : ${session.steps[session.index + 1].name}` : '';
+    byId('task').textContent = pause ? t('itsBreak') : step ? step.name : t('sessionOver');
+    byId('where').textContent = pause && !held ? t('resumeWith', session.steps[session.index + 1].name) : '';
     byId('noted').hidden = true;
   }
 };

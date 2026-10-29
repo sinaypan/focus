@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="fr">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <title>Focus</title>
@@ -15,14 +15,15 @@
       <p id="where" class="muted"></p>
 
       <form id="laterForm">
-        <input id="laterInput" type="text" maxlength="200" placeholder="Ce que tu voulais y faire ? Note-le pour la pause" aria-label="Noter pour plus tard" autocomplete="off" />
+        <input id="laterInput" type="text" maxlength="200" data-i18n-placeholder="blockedPlaceholder" data-i18n-aria-label="noteForLater" autocomplete="off" />
       </form>
-      <p id="noted" class="muted" hidden>Noté. Tu le retrouveras à la pause, dans la bulle de Focus.</p>
+      <p id="noted" class="muted" hidden data-i18n="noted"></p>
 
       <button id="back" class="main" type="button" hidden></button>
       <button id="need" class="link" type="button"></button>
     </main>
 
+    <script src="i18n.js"></script>
     <script src="shared.js"></script>
     <script src="blocked.js"></script>
   </body>

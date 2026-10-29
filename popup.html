@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="fr">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <title>Focus</title>
@@ -17,35 +17,35 @@
         <ol id="blocks"></ol>
         <button id="add" class="add" type="button">
           <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8h9M8 3.5v9" /></svg>
-          Ajouter un bloc
+          <span data-i18n="addBlock"></span>
         </button>
       </div>
 
       <div class="card row">
-        <span>Pause entre les blocs</span>
-        <div id="pause" class="chips" role="radiogroup" aria-label="Durée de la pause"></div>
+        <span data-i18n="pauseBetween"></span>
+        <div id="pause" class="chips" role="radiogroup" data-i18n-aria-label="pauseLength"></div>
       </div>
 
       <label class="card row">
-        <span>Onglet à part, en plein écran</span>
+        <span data-i18n="fullscreenOption"></span>
         <input id="fullscreen" class="switch" type="checkbox" />
       </label>
 
       <div class="card">
         <label class="row">
-          <span>Fermer des sites pendant les blocs</span>
+          <span data-i18n="blockingOption"></span>
           <input id="blocking" class="switch" type="checkbox" />
         </label>
         <div id="sitesPanel" hidden>
           <div id="sites" class="chips"></div>
           <form id="siteForm">
-            <input id="siteInput" type="text" placeholder="Ajouter un site, par exemple lequipe.fr" aria-label="Ajouter un site" autocomplete="off" spellcheck="false" />
+            <input id="siteInput" type="text" data-i18n-placeholder="addSitePlaceholder" data-i18n-aria-label="addSite" autocomplete="off" spellcheck="false" />
           </form>
           <p id="siteError" class="error" hidden></p>
         </div>
       </div>
 
-      <button id="start" class="main" type="button">Lancer la séance</button>
+      <button id="start" class="main" type="button" data-i18n="start"></button>
       <p id="day" class="muted centre" hidden></p>
     </section>
 
@@ -60,7 +60,7 @@
       <p id="next" class="muted"></p>
 
       <form id="laterForm">
-        <input id="laterInput" type="text" maxlength="200" placeholder="Une idée, une envie ? Note-la pour la pause" aria-label="Noter pour plus tard" autocomplete="off" />
+        <input id="laterInput" type="text" maxlength="200" data-i18n-placeholder="laterPlaceholder" data-i18n-aria-label="noteForLater" autocomplete="off" />
       </form>
       <p id="laterCount" class="muted centre" hidden></p>
 
@@ -68,17 +68,18 @@
         <button id="hold" class="soft" type="button"></button>
         <button id="skip" class="soft" type="button"></button>
       </div>
-      <button id="stop" class="link" type="button">Arrêter la séance</button>
+      <button id="stop" class="link" type="button" data-i18n="stop"></button>
     </section>
 
     <section id="laterBox" hidden>
-      <h2>À voir plus tard</h2>
+      <h2 data-i18n="laterTitle"></h2>
       <ul id="later" class="card"></ul>
     </section>
 
     <!-- Un souci signalé par le fond, à lire et à recopier tel quel. -->
     <p id="trouble" class="error" hidden></p>
 
+    <script src="i18n.js"></script>
     <script src="shared.js"></script>
     <script src="popup.js"></script>
   </body>

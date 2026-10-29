@@ -6,6 +6,13 @@
   globalThis.focusPill?.();
 
   const CORNERS = ['br', 'bl', 'tl', 'tr'];
+
+  // Textes dans la langue de Chrome (_locales), pluriels selon la règle de la langue.
+  // Script injecté dans les pages : il n'utilise pas i18n.js, qui touche au document.
+  const t = (key, ...subs) => chrome.i18n.getMessage(key, subs.map(String)) || key;
+  const plurals = new Intl.PluralRules(chrome.i18n.getUILanguage());
+  const tp = (key, count, ...subs) =>
+    chrome.i18n.getMessage(`${key}_${plurals.select(count)}`, [count, ...subs].map(String)) || t(`${key}_other`, count, ...subs);
   const SHOW_MS = 8000; // durée d'une annonce (pause, reprise, fin) avant de se replier
 
   const CSS_TEXT = `
@@ -302,11 +309,11 @@
   ring.append(shape('circle', { cx: 9, cy: 9, r: 7, class: 'rest' }), ringDone);
   const name = make('span', 'name');
   const time = make('span', 'time');
-  const pill = button('pill', 'Ouvrir le minuteur', ring, name, time);
+  const pill = button('pill', t('openTimer'), ring, name, time);
 
   const where = make('span', 'where');
-  const cornerButton = button('tool', 'Changer de coin', icon('M8 2v12M2 8h12M6 4l2-2 2 2M6 12l2 2 2-2M4 6L2 8l2 2M12 6l2 2-2 2'));
-  const closeButton = button('tool', 'Replier', icon('M4.5 4.5l7 7M11.5 4.5l-7 7'));
+  const cornerButton = button('tool', t('changeCorner'), icon('M8 2v12M2 8h12M6 4l2-2 2 2M6 12l2 2 2-2M4 6L2 8l2 2M12 6l2 2-2 2'));
+  const closeButton = button('tool', t('fold'), icon('M4.5 4.5l7 7M11.5 4.5l-7 7'));
   const headline = make('div', 'headline');
   const task = make('div', 'task');
   const bigClock = make('div', 'clock');
@@ -316,8 +323,8 @@
   input.type = 'text';
   input.maxLength = 200;
   input.autocomplete = 'off';
-  input.placeholder = 'Une idée ? Note-la pour la pause';
-  input.setAttribute('aria-label', 'Noter pour plus tard');
+  input.placeholder = t('pillPlaceholder');
+  input.setAttribute('aria-label', t('noteForLater'));
   const form = make('form', '', input);
   const count = make('div', 'count');
   const holdButton = button('soft');
@@ -355,7 +362,7 @@
 
     if (farewell) {
       where.textContent = 'Focus';
-      task.textContent = `${done.blocks} bloc${done.blocks > 1 ? 's' : ''} au bout`;
+      task.textContent = tp('blocksDone', done.blocks);
       return;
     }
 
@@ -363,12 +370,12 @@
     const position = session.steps.slice(0, session.index + 1).filter((entry) => entry.kind === 'work').length;
     const left = leftOf(session);
     const share = 1 - left / (step.minutes * 60000);
-    name.textContent = working ? step.name : 'Pause';
+    name.textContent = working ? step.name : t('pause');
     time.textContent = clock(left);
     ringDone.setAttribute('stroke-dashoffset', RING * (1 - share));
 
     if (!open) return;
-    where.textContent = working ? `Bloc ${position} sur ${works.length}` : `Bloc ${position} sur ${works.length} terminé`;
+    where.textContent = t(working ? 'blockOf' : 'blockOfDone', position, works.length);
     task.textContent = name.textContent;
     bigClock.textContent = time.textContent;
     if (track.childElementCount !== works.length) track.replaceChildren(...works.map(() => make('i', '', make('b'))));
@@ -376,17 +383,17 @@
       const full = index + 1 < position || (index + 1 === position && !working);
       track.children[index].firstChild.style.width = `${Math.round((full ? 1 : index + 1 === position ? share : 0) * 100)}%`;
     });
-    count.textContent = `${later.length} note${later.length > 1 ? 's' : ''} pour la pause`;
-    holdButton.textContent = held ? 'Reprendre' : 'Suspendre';
-    skipButton.textContent = working ? 'J’ai fini ce bloc' : 'Finir la pause';
+    count.textContent = tp('notesForBreak', later.length);
+    holdButton.textContent = t(held ? 'resume' : 'hold');
+    skipButton.textContent = t(working ? 'finishedBlock' : 'endBreak');
     skipButton.hidden = held;
-    if (!armed) stopButton.textContent = 'Arrêter la séance';
+    if (!armed) stopButton.textContent = t('stop');
   };
 
   const drawNotes = () => {
     notes.replaceChildren(
       ...later.map((note) => {
-        const tick = button('tool', 'C’est fait', icon('M3.5 8.5l3 3 6-7'));
+        const tick = button('tool', t('done'), icon('M3.5 8.5l3 3 6-7'));
         onClick(tick, () => send('forget', { id: note.id }));
         const text = make('span', '', note.text);
         text.title = note.text;
@@ -531,7 +538,7 @@
         // Allée au bout : on le dit. Arrêtée à la main : la pastille s'en va sans rien dire.
         if (!before || !done || Date.now() - done.at > 5000) return unmount();
         farewell = true;
-        announce('Séance terminée');
+        announce(t('announceEnd'));
         return draw();
       }
       farewell = false;
@@ -542,7 +549,7 @@
         open = false;
         news = '';
       }
-      if (before && before.index !== session.index) announce(stepOf(session).kind === 'work' ? 'La pause est finie' : 'Bloc terminé');
+      if (before && before.index !== session.index) announce(t(stepOf(session).kind === 'work' ? 'announceBreakOver' : 'announceBlockDone'));
     }
     tick();
   }
@@ -562,7 +569,7 @@
       armed = null;
       return send('stop');
     }
-    stopButton.textContent = 'Clique encore pour arrêter';
+    stopButton.textContent = t('clickAgain');
     armed = setTimeout(() => {
       armed = null;
       draw();

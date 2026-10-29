@@ -28,20 +28,20 @@ let day = null;
 let trouble = null;
 
 const savePlan = () => chrome.storage.local.set({ plan });
-const hour = (date) => date.toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' });
+const hour = (date) => date.toLocaleTimeString(chrome.i18n.getUILanguage(), { hour: '2-digit', minute: '2-digit' });
 
 /* ---------- Avant la séance ---------- */
 
 const drawTotal = () => {
   const total = plan.blocks.reduce((sum, block) => sum + block.minutes, 0) + plan.pause * (plan.blocks.length - 1);
-  byId('total').textContent = `${span(total)} · fin à ${hour(new Date(Date.now() + total * 60000))}`;
+  byId('total').textContent = t('totalEnds', span(total), hour(new Date(Date.now() + total * 60000)));
 };
 
 const drawBlocks = () => {
   byId('blocks').replaceChildren(
     ...plan.blocks.map((block, index) => {
-      const name = make('input', { type: 'text', value: block.name, maxLength: 40, placeholder: index ? 'Et ensuite ?' : 'Quelle tâche ?' });
-      name.setAttribute('aria-label', `Tâche du bloc ${index + 1}`);
+      const name = make('input', { type: 'text', value: block.name, maxLength: 40, placeholder: t(index ? 'nextTask' : 'firstTask') });
+      name.setAttribute('aria-label', t('blockTask', index + 1));
       name.autocomplete = 'off';
       name.addEventListener('input', () => {
         block.name = name.value;
@@ -50,7 +50,7 @@ const drawBlocks = () => {
 
       // La durée s'écrit à la main (23 min), ou se règle de 5 en 5 avec − et +.
       const length = make('input', { type: 'text', value: block.minutes, maxLength: 3, inputMode: 'numeric' });
-      length.setAttribute('aria-label', `Durée du bloc ${index + 1}, en minutes`);
+      length.setAttribute('aria-label', t('blockLength', index + 1));
       length.autocomplete = 'off';
       const set = (minutes) => {
         block.minutes = Math.min(LONGEST, Math.max(SHORTEST, minutes));
@@ -68,14 +68,14 @@ const drawBlocks = () => {
         set(to(block.minutes));
         length.value = block.minutes;
       };
-      const less = make('button', { type: 'button', title: 'Moins long' }, icon('M4.5 8h7'));
-      const more = make('button', { type: 'button', title: 'Plus long' }, icon('M4.5 8h7M8 4.5v7'));
+      const less = make('button', { type: 'button', title: t('shorter') }, icon('M4.5 8h7'));
+      const more = make('button', { type: 'button', title: t('longer') }, icon('M4.5 8h7M8 4.5v7'));
       less.setAttribute('aria-label', less.title);
       more.setAttribute('aria-label', more.title);
       less.addEventListener('click', change((minutes) => Math.ceil(minutes / 5) * 5 - 5));
       more.addEventListener('click', change((minutes) => Math.floor(minutes / 5) * 5 + 5));
 
-      const remove = make('button', { type: 'button', className: 'remove', title: 'Retirer ce bloc' }, icon('M5 5l6 6M11 5l-6 6'));
+      const remove = make('button', { type: 'button', className: 'remove', title: t('removeBlock') }, icon('M5 5l6 6M11 5l-6 6'));
       remove.setAttribute('aria-label', remove.title);
       remove.hidden = plan.blocks.length < 2;
       remove.addEventListener('click', () => {
@@ -84,7 +84,7 @@ const drawBlocks = () => {
         drawBlocks();
       });
 
-      return make('li', {}, make('span', { className: 'n', textContent: index + 1 }), name, make('div', { className: 'stepper' }, less, make('label', {}, length, 'min'), more), remove);
+      return make('li', {}, make('span', { className: 'n', textContent: index + 1 }), name, make('div', { className: 'stepper' }, less, make('label', {}, length, t('minUnit')), more), remove);
     }),
   );
   byId('add').hidden = plan.blocks.length >= MOST;
@@ -94,7 +94,7 @@ const drawBlocks = () => {
 const drawPause = () => {
   byId('pause').replaceChildren(
     ...PAUSES.map((minutes) => {
-      const chip = make('button', { type: 'button', textContent: `${minutes} min` });
+      const chip = make('button', { type: 'button', textContent: span(minutes) });
       chip.setAttribute('role', 'radio');
       chip.setAttribute('aria-checked', String(plan.pause === minutes));
       chip.addEventListener('click', () => {
@@ -112,7 +112,7 @@ const drawSites = () => {
   byId('sitesPanel').hidden = !plan.blocking;
   byId('sites').replaceChildren(
     ...plan.sites.map((site) => {
-      const chip = make('button', { type: 'button', title: `Ne plus fermer ${site}` }, site, icon('M5 5l6 6M11 5l-6 6'));
+      const chip = make('button', { type: 'button', title: t('stopClosing', site) }, site, icon('M5 5l6 6M11 5l-6 6'));
       chip.addEventListener('click', () => {
         plan.sites = plan.sites.filter((other) => other !== site);
         savePlan();
@@ -151,7 +151,7 @@ byId('siteForm').addEventListener('submit', (event) => {
   event.preventDefault();
   const site = siteFrom(byId('siteInput').value);
   byId('siteError').hidden = Boolean(site);
-  byId('siteError').textContent = 'Écris l’adresse du site, par exemple lequipe.fr';
+  byId('siteError').textContent = t('siteError');
   if (!site) return;
   if (!plan.sites.includes(site)) plan.sites.push(site);
   byId('siteInput').value = '';
@@ -175,14 +175,14 @@ const drawRun = () => {
 
   document.body.dataset.kind = step.kind;
   document.body.classList.toggle('held', held);
-  byId('where').textContent = working ? `Bloc ${position} sur ${works.length}` : `Bloc ${position} sur ${works.length} terminé`;
-  byId('task').textContent = working ? step.name : 'Pause';
+  byId('where').textContent = t(working ? 'blockOf' : 'blockOfDone', position, works.length);
+  byId('task').textContent = working ? step.name : t('pause');
   byId('clock').textContent = clock(left);
 
-  let next = works.length > 1 ? 'Dernier bloc de la séance' : '';
-  if (held) next = 'Séance suspendue';
-  else if (after?.kind === 'pause') next = `Ensuite : pause de ${span(after.minutes)}, puis ${session.steps[session.index + 2].name}`;
-  else if (after) next = `Ensuite : ${after.name} · ${span(after.minutes)}`;
+  let next = works.length > 1 ? t('lastBlock') : '';
+  if (held) next = t('sessionHeld');
+  else if (after?.kind === 'pause') next = t('nextPauseThen', span(after.minutes), session.steps[session.index + 2].name);
+  else if (after) next = t('nextTaskSpan', after.name, span(after.minutes));
   byId('next').textContent = next;
 
   // Un segment par bloc, qui se remplit pendant qu'on y travaille.
@@ -194,8 +194,8 @@ const drawRun = () => {
     track.children[index].firstChild.style.width = `${Math.round(share * 100)}%`;
   });
 
-  byId('hold').textContent = held ? 'Reprendre' : 'Suspendre';
-  byId('skip').textContent = working ? 'J’ai fini ce bloc' : 'Finir la pause';
+  byId('hold').textContent = t(held ? 'resume' : 'hold');
+  byId('skip').textContent = t(working ? 'finishedBlock' : 'endBreak');
   byId('skip').hidden = held;
 };
 
@@ -213,7 +213,7 @@ let armed = null;
 const disarm = () => {
   clearTimeout(armed);
   armed = null;
-  byId('stop').textContent = 'Arrêter la séance';
+  byId('stop').textContent = t('stop');
 };
 byId('stop').addEventListener('click', () => {
   if (armed) {
@@ -221,7 +221,7 @@ byId('stop').addEventListener('click', () => {
     send('stop');
     return;
   }
-  byId('stop').textContent = 'Clique encore pour arrêter';
+  byId('stop').textContent = t('clickAgain');
   armed = setTimeout(disarm, 3000);
 });
 
@@ -231,11 +231,11 @@ const drawLater = () => {
   const working = stepOf(session)?.kind === 'work';
   // Pendant un bloc, les notes restent rangées : seul leur nombre s'affiche.
   byId('laterCount').hidden = !working || !later.length;
-  byId('laterCount').textContent = `${later.length} note${later.length > 1 ? 's' : ''} pour la pause`;
+  byId('laterCount').textContent = tp('notesForBreak', later.length);
   byId('laterBox').hidden = working || !later.length;
   byId('later').replaceChildren(
     ...later.map((note) => {
-      const done = make('button', { type: 'button', title: 'C’est fait' }, icon('M3.5 8.5l3 3 6-7'));
+      const done = make('button', { type: 'button', title: t('done') }, icon('M3.5 8.5l3 3 6-7'));
       done.setAttribute('aria-label', done.title);
       done.addEventListener('click', () => send('forget', { id: note.id }));
       return make('li', {}, make('span', { textContent: note.text, title: note.text }), done);
@@ -246,7 +246,7 @@ const drawLater = () => {
 const drawDay = () => {
   const blocks = day?.date === today() ? day.blocks : 0;
   byId('day').hidden = !blocks;
-  byId('day').textContent = `Aujourd’hui : ${blocks} bloc${blocks > 1 ? 's' : ''} fini${blocks > 1 ? 's' : ''} · ${span(day?.minutes ?? 0)}`;
+  byId('day').textContent = tp('todayDone', blocks, span(day?.minutes ?? 0));
 };
 
 const drawTrouble = () => {

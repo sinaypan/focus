@@ -1,5 +1,11 @@
 importScripts('shared.js');
 
+// Textes dans la langue de Chrome (_locales), pluriels selon la règle de la langue.
+const t = (key, ...subs) => chrome.i18n.getMessage(key, subs.map(String)) || key;
+const plurals = new Intl.PluralRules(chrome.i18n.getUILanguage());
+const tp = (key, count, ...subs) =>
+  chrome.i18n.getMessage(`${key}_${plurals.select(count)}`, [count, ...subs].map(String)) || t(`${key}_other`, count, ...subs);
+
 const STEP = 'step'; // la fin du bloc ou de la pause en cours
 const TICK = 'tick'; // une fois par minute, pour le chiffre sur l'icône
 const MINUTE = 60000;
@@ -67,11 +73,11 @@ const pin = async (tabId) => {
   await Promise.race([
     inject(tabId),
     wait(2000).then(() => {
-      throw new Error('la page ne répond pas');
+      throw new Error(t('errPageSilent'));
     }),
   ]);
   const [check] = await chrome.scripting.executeScript({ target: { tabId }, func: () => typeof globalThis.focusPill === 'function', injectImmediately: true });
-  if (!check?.result) throw new Error('le minuteur ne s’est pas installé dans la page');
+  if (!check?.result) throw new Error(t('errTimerMissing'));
 };
 
 // Les onglets déjà ouverts : fermer ceux qui sont sur un site de la liste (sweep),
@@ -144,16 +150,16 @@ const badge = (session) => {
 const settle = async (session, { sweep = false, pills = false, skip } = {}) => {
   const locked = lockedSites(session);
   guard(locked.length > 0);
-  await attempt('Le minuteur ne suivra pas sur les pages ouvertes ensuite', () => enrol(Boolean(session)));
-  await attempt('Le minuteur de la séance n’a pas pu être réglé', async () => {
+  await attempt(t('tPinLater'), () => enrol(Boolean(session)));
+  await attempt(t('tAlarm'), async () => {
     await chrome.alarms.clearAll();
     if (!session?.endsAt) return;
     const left = Math.max(0, session.endsAt - Date.now());
     await chrome.alarms.create(STEP, { when: session.endsAt });
     await chrome.alarms.create(TICK, { when: Date.now() + (left % MINUTE) + 100, periodInMinutes: 1 });
   });
-  await attempt('Le chiffre de l’icône n’a pas pu être mis à jour', () => badge(session));
-  if (sweep || pills) await attempt('Les autres onglets n’ont pas pu être préparés', () => visit(session, { sweep, pills, skip }));
+  await attempt(t('tBadge'), () => badge(session));
+  if (sweep || pills) await attempt(t('tTabs'), () => visit(session, { sweep, pills, skip }));
 };
 
 const notify = (title, message) =>
@@ -187,7 +193,7 @@ const advance = async (byClock) => {
     await store(null);
     await settle(null);
     await leave(session).catch(() => {});
-    if (byClock) notify('Séance terminée', `${blocks} bloc${blocks > 1 ? 's' : ''} au bout. Les sites sont rouverts.`);
+    if (byClock) notify(t('announceEnd'), tp('nSessionOverBody', blocks));
     return;
   }
   const moved = { ...session, index: session.index + 1, allowed: [], endsAt: Date.now() + next.minutes * MINUTE };
@@ -197,10 +203,10 @@ const advance = async (byClock) => {
   if (!byClock) return;
   if (next.kind === 'pause') {
     const after = moved.steps[moved.index + 1];
-    notify(`Pause · ${span(next.minutes)}`, `Bloc terminé : ${done.name}. Ensuite : ${after.name}.`);
+    notify(t('nBreakTitle', span(next.minutes)), t('nBreakBody', done.name, after.name));
   } else {
     const position = workSteps({ steps: moved.steps.slice(0, moved.index + 1) }).length;
-    notify(`${next.name} · ${span(next.minutes)}`, `La pause est finie. Bloc ${position} sur ${workSteps(moved).length}.`);
+    notify(t('nBlockTitle', next.name, span(next.minutes)), t('nBlockBody', position, workSteps(moved).length));
   }
 };
 
@@ -210,17 +216,17 @@ const ACTIONS = {
     const blocks = plan.blocks.filter((block) => block.minutes > 0);
     if (!blocks.length) return;
     const steps = blocks.flatMap((block, index) => [
-      { kind: 'work', name: block.name.trim() || `Bloc ${index + 1}`, minutes: block.minutes },
+      { kind: 'work', name: block.name.trim() || t('defaultBlockName', index + 1), minutes: block.minutes },
       ...(index < blocks.length - 1 && plan.pause > 0 ? [{ kind: 'pause', minutes: plan.pause }] : []),
     ]);
     await chrome.storage.local.remove('trouble');
     const [tab] = await chrome.tabs.query({ active: true, lastFocusedWindow: true, windowType: 'normal' });
     // La pastille d'abord, dans l'onglet d'où part la séance. Si elle ne peut pas s'y poser,
     // pas de plein écran : sans elle ni la barre de Chrome, il ne resterait aucun moyen d'agir.
-    const place = hostOf(tab?.url) || 'cette page';
-    const pinned = Boolean(tab) && (await attempt(`Le minuteur ne peut pas s’afficher sur ${place}`, () => pin(tab.id).then(() => true)));
+    const place = hostOf(tab?.url) || t('thisPage');
+    const pinned = Boolean(tab) && (await attempt(t('tPinHere', place), () => pin(tab.id).then(() => true)));
     const wanted = plan.fullscreen !== false && pinned;
-    const window = wanted ? await attempt('La fenêtre n’a pas pu passer en plein écran', () => enter(tab)) : null;
+    const window = wanted ? await attempt(t('tFullscreen'), () => enter(tab)) : null;
     const sites = plan.blocking ? plan.sites : [];
     const session = { steps, index: 0, endsAt: Date.now() + steps[0].minutes * MINUTE, sites, allowed: [], window };
     await store(session);

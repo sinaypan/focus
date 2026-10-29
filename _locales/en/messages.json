@@ -1,0 +1,433 @@
+{
+  "extName": {
+    "message": "Focus"
+  },
+  "extDesc": {
+    "message": "Work sessions in blocks: one task at a time, fixed breaks, the tab on its own in full screen, and a timer that follows you on every page."
+  },
+  "addBlock": {
+    "message": "Add a block"
+  },
+  "pauseBetween": {
+    "message": "Break between blocks"
+  },
+  "pauseLength": {
+    "message": "Break length"
+  },
+  "fullscreenOption": {
+    "message": "Tab on its own, in full screen"
+  },
+  "blockingOption": {
+    "message": "Close sites during blocks"
+  },
+  "addSitePlaceholder": {
+    "message": "Add a site, for example espn.com"
+  },
+  "addSite": {
+    "message": "Add a site"
+  },
+  "start": {
+    "message": "Start the session"
+  },
+  "laterPlaceholder": {
+    "message": "An idea, an urge? Note it for the break"
+  },
+  "noteForLater": {
+    "message": "Note for later"
+  },
+  "stop": {
+    "message": "Stop the session"
+  },
+  "laterTitle": {
+    "message": "To look at later"
+  },
+  "firstTask": {
+    "message": "Which task?"
+  },
+  "nextTask": {
+    "message": "What next?"
+  },
+  "blockTask": {
+    "message": "Task of block $N$",
+    "placeholders": {
+      "n": {
+        "content": "$1"
+      }
+    }
+  },
+  "blockLength": {
+    "message": "Length of block $N$, in minutes",
+    "placeholders": {
+      "n": {
+        "content": "$1"
+      }
+    }
+  },
+  "shorter": {
+    "message": "Shorter"
+  },
+  "longer": {
+    "message": "Longer"
+  },
+  "removeBlock": {
+    "message": "Remove this block"
+  },
+  "minUnit": {
+    "message": "min"
+  },
+  "stopClosing": {
+    "message": "Stop closing $SITE$",
+    "placeholders": {
+      "site": {
+        "content": "$1"
+      }
+    }
+  },
+  "siteError": {
+    "message": "Type the site’s address, for example espn.com"
+  },
+  "totalEnds": {
+    "message": "$SPAN$ · ends at $TIME$",
+    "placeholders": {
+      "span": {
+        "content": "$1"
+      },
+      "time": {
+        "content": "$2"
+      }
+    }
+  },
+  "blockOf": {
+    "message": "Block $N$ of $TOTAL$",
+    "placeholders": {
+      "n": {
+        "content": "$1"
+      },
+      "total": {
+        "content": "$2"
+      }
+    }
+  },
+  "blockOfDone": {
+    "message": "Block $N$ of $TOTAL$ done",
+    "placeholders": {
+      "n": {
+        "content": "$1"
+      },
+      "total": {
+        "content": "$2"
+      }
+    }
+  },
+  "pause": {
+    "message": "Break"
+  },
+  "lastBlock": {
+    "message": "Last block of the session"
+  },
+  "sessionHeld": {
+    "message": "Session paused"
+  },
+  "nextPauseThen": {
+    "message": "Next: $SPAN$ break, then $TASK$",
+    "placeholders": {
+      "span": {
+        "content": "$1"
+      },
+      "task": {
+        "content": "$2"
+      }
+    }
+  },
+  "nextTaskSpan": {
+    "message": "Next: $TASK$ · $SPAN$",
+    "placeholders": {
+      "task": {
+        "content": "$1"
+      },
+      "span": {
+        "content": "$2"
+      }
+    }
+  },
+  "resume": {
+    "message": "Resume"
+  },
+  "hold": {
+    "message": "Pause"
+  },
+  "finishedBlock": {
+    "message": "I finished this block"
+  },
+  "endBreak": {
+    "message": "End the break"
+  },
+  "clickAgain": {
+    "message": "Click again to stop"
+  },
+  "notesForBreak_one": {
+    "message": "$COUNT$ note for the break",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "notesForBreak_other": {
+    "message": "$COUNT$ notes for the break",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "done": {
+    "message": "Done"
+  },
+  "todayDone_one": {
+    "message": "Today: $COUNT$ block done · $SPAN$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      },
+      "span": {
+        "content": "$2"
+      }
+    }
+  },
+  "todayDone_other": {
+    "message": "Today: $COUNT$ blocks done · $SPAN$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      },
+      "span": {
+        "content": "$2"
+      }
+    }
+  },
+  "spanMin": {
+    "message": "$M$ min",
+    "placeholders": {
+      "m": {
+        "content": "$1"
+      }
+    }
+  },
+  "spanHours": {
+    "message": "$H$ h",
+    "placeholders": {
+      "h": {
+        "content": "$1"
+      }
+    }
+  },
+  "spanHoursMin": {
+    "message": "$H$ h $M$ min",
+    "placeholders": {
+      "h": {
+        "content": "$1"
+      },
+      "m": {
+        "content": "$2"
+      }
+    }
+  },
+  "openTimer": {
+    "message": "Open the timer"
+  },
+  "changeCorner": {
+    "message": "Change corner"
+  },
+  "fold": {
+    "message": "Fold"
+  },
+  "pillPlaceholder": {
+    "message": "An idea? Note it for the break"
+  },
+  "blocksDone_one": {
+    "message": "$COUNT$ block done",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "blocksDone_other": {
+    "message": "$COUNT$ blocks done",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "announceEnd": {
+    "message": "Session over"
+  },
+  "announceBreakOver": {
+    "message": "The break is over"
+  },
+  "announceBlockDone": {
+    "message": "Block done"
+  },
+  "errPageSilent": {
+    "message": "the page does not respond"
+  },
+  "errTimerMissing": {
+    "message": "the timer did not install in the page"
+  },
+  "tPinLater": {
+    "message": "The timer will not follow on pages opened later"
+  },
+  "tAlarm": {
+    "message": "The session timer could not be set"
+  },
+  "tBadge": {
+    "message": "The number on the icon could not be updated"
+  },
+  "tTabs": {
+    "message": "The other tabs could not be prepared"
+  },
+  "tPinHere": {
+    "message": "The timer cannot show on $PLACE$",
+    "placeholders": {
+      "place": {
+        "content": "$1"
+      }
+    }
+  },
+  "thisPage": {
+    "message": "this page"
+  },
+  "tFullscreen": {
+    "message": "The window could not go full screen"
+  },
+  "nSessionOverBody_one": {
+    "message": "$COUNT$ block done. The sites are open again.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "nSessionOverBody_other": {
+    "message": "$COUNT$ blocks done. The sites are open again.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "nBreakTitle": {
+    "message": "Break · $SPAN$",
+    "placeholders": {
+      "span": {
+        "content": "$1"
+      }
+    }
+  },
+  "nBreakBody": {
+    "message": "Block done: $DONE$. Next: $NEXT$.",
+    "placeholders": {
+      "done": {
+        "content": "$1"
+      },
+      "next": {
+        "content": "$2"
+      }
+    }
+  },
+  "nBlockTitle": {
+    "message": "$TASK$ · $SPAN$",
+    "placeholders": {
+      "task": {
+        "content": "$1"
+      },
+      "span": {
+        "content": "$2"
+      }
+    }
+  },
+  "nBlockBody": {
+    "message": "The break is over. Block $N$ of $TOTAL$.",
+    "placeholders": {
+      "n": {
+        "content": "$1"
+      },
+      "total": {
+        "content": "$2"
+      }
+    }
+  },
+  "defaultBlockName": {
+    "message": "Block $N$",
+    "placeholders": {
+      "n": {
+        "content": "$1"
+      }
+    }
+  },
+  "closedDuring": {
+    "message": "$HOST$ · closed during the block",
+    "placeholders": {
+      "host": {
+        "content": "$1"
+      }
+    }
+  },
+  "backTo": {
+    "message": "Back to $HOST$",
+    "placeholders": {
+      "host": {
+        "content": "$1"
+      }
+    }
+  },
+  "waitsForBreak": {
+    "message": "$HOST$ waits for the break",
+    "placeholders": {
+      "host": {
+        "content": "$1"
+      }
+    }
+  },
+  "openingIn": {
+    "message": "Opening in $N$ s · click to cancel",
+    "placeholders": {
+      "n": {
+        "content": "$1"
+      }
+    }
+  },
+  "needIt": {
+    "message": "I need it for this block"
+  },
+  "reopened": {
+    "message": "$HOST$ is open again",
+    "placeholders": {
+      "host": {
+        "content": "$1"
+      }
+    }
+  },
+  "itsBreak": {
+    "message": "It’s the break"
+  },
+  "sessionOver": {
+    "message": "The session is over"
+  },
+  "resumeWith": {
+    "message": "Back to: $TASK$",
+    "placeholders": {
+      "task": {
+        "content": "$1"
+      }
+    }
+  },
+  "blockedPlaceholder": {
+    "message": "What did you want to do there? Note it for the break"
+  },
+  "noted": {
+    "message": "Noted. You will find it at the break, in the Focus bubble."
+  }
+}

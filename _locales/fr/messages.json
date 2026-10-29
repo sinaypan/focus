@@ -1,0 +1,433 @@
+{
+  "extName": {
+    "message": "Focus"
+  },
+  "extDesc": {
+    "message": "Des séances de travail par blocs : une tâche à la fois, des pauses fixes, l’onglet à part en plein écran et un minuteur qui suit sur chaque page."
+  },
+  "addBlock": {
+    "message": "Ajouter un bloc"
+  },
+  "pauseBetween": {
+    "message": "Pause entre les blocs"
+  },
+  "pauseLength": {
+    "message": "Durée de la pause"
+  },
+  "fullscreenOption": {
+    "message": "Onglet à part, en plein écran"
+  },
+  "blockingOption": {
+    "message": "Fermer des sites pendant les blocs"
+  },
+  "addSitePlaceholder": {
+    "message": "Ajouter un site, par exemple lequipe.fr"
+  },
+  "addSite": {
+    "message": "Ajouter un site"
+  },
+  "start": {
+    "message": "Lancer la séance"
+  },
+  "laterPlaceholder": {
+    "message": "Une idée, une envie ? Note-la pour la pause"
+  },
+  "noteForLater": {
+    "message": "Noter pour plus tard"
+  },
+  "stop": {
+    "message": "Arrêter la séance"
+  },
+  "laterTitle": {
+    "message": "À voir plus tard"
+  },
+  "firstTask": {
+    "message": "Quelle tâche ?"
+  },
+  "nextTask": {
+    "message": "Et ensuite ?"
+  },
+  "blockTask": {
+    "message": "Tâche du bloc $N$",
+    "placeholders": {
+      "n": {
+        "content": "$1"
+      }
+    }
+  },
+  "blockLength": {
+    "message": "Durée du bloc $N$, en minutes",
+    "placeholders": {
+      "n": {
+        "content": "$1"
+      }
+    }
+  },
+  "shorter": {
+    "message": "Moins long"
+  },
+  "longer": {
+    "message": "Plus long"
+  },
+  "removeBlock": {
+    "message": "Retirer ce bloc"
+  },
+  "minUnit": {
+    "message": "min"
+  },
+  "stopClosing": {
+    "message": "Ne plus fermer $SITE$",
+    "placeholders": {
+      "site": {
+        "content": "$1"
+      }
+    }
+  },
+  "siteError": {
+    "message": "Écris l’adresse du site, par exemple lequipe.fr"
+  },
+  "totalEnds": {
+    "message": "$SPAN$ · fin à $TIME$",
+    "placeholders": {
+      "span": {
+        "content": "$1"
+      },
+      "time": {
+        "content": "$2"
+      }
+    }
+  },
+  "blockOf": {
+    "message": "Bloc $N$ sur $TOTAL$",
+    "placeholders": {
+      "n": {
+        "content": "$1"
+      },
+      "total": {
+        "content": "$2"
+      }
+    }
+  },
+  "blockOfDone": {
+    "message": "Bloc $N$ sur $TOTAL$ terminé",
+    "placeholders": {
+      "n": {
+        "content": "$1"
+      },
+      "total": {
+        "content": "$2"
+      }
+    }
+  },
+  "pause": {
+    "message": "Pause"
+  },
+  "lastBlock": {
+    "message": "Dernier bloc de la séance"
+  },
+  "sessionHeld": {
+    "message": "Séance suspendue"
+  },
+  "nextPauseThen": {
+    "message": "Ensuite : pause de $SPAN$, puis $TASK$",
+    "placeholders": {
+      "span": {
+        "content": "$1"
+      },
+      "task": {
+        "content": "$2"
+      }
+    }
+  },
+  "nextTaskSpan": {
+    "message": "Ensuite : $TASK$ · $SPAN$",
+    "placeholders": {
+      "task": {
+        "content": "$1"
+      },
+      "span": {
+        "content": "$2"
+      }
+    }
+  },
+  "resume": {
+    "message": "Reprendre"
+  },
+  "hold": {
+    "message": "Suspendre"
+  },
+  "finishedBlock": {
+    "message": "J’ai fini ce bloc"
+  },
+  "endBreak": {
+    "message": "Finir la pause"
+  },
+  "clickAgain": {
+    "message": "Clique encore pour arrêter"
+  },
+  "notesForBreak_one": {
+    "message": "$COUNT$ note pour la pause",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "notesForBreak_other": {
+    "message": "$COUNT$ notes pour la pause",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "done": {
+    "message": "C’est fait"
+  },
+  "todayDone_one": {
+    "message": "Aujourd’hui : $COUNT$ bloc fini · $SPAN$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      },
+      "span": {
+        "content": "$2"
+      }
+    }
+  },
+  "todayDone_other": {
+    "message": "Aujourd’hui : $COUNT$ blocs finis · $SPAN$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      },
+      "span": {
+        "content": "$2"
+      }
+    }
+  },
+  "spanMin": {
+    "message": "$M$ min",
+    "placeholders": {
+      "m": {
+        "content": "$1"
+      }
+    }
+  },
+  "spanHours": {
+    "message": "$H$ h",
+    "placeholders": {
+      "h": {
+        "content": "$1"
+      }
+    }
+  },
+  "spanHoursMin": {
+    "message": "$H$ h $M$",
+    "placeholders": {
+      "h": {
+        "content": "$1"
+      },
+      "m": {
+        "content": "$2"
+      }
+    }
+  },
+  "openTimer": {
+    "message": "Ouvrir le minuteur"
+  },
+  "changeCorner": {
+    "message": "Changer de coin"
+  },
+  "fold": {
+    "message": "Replier"
+  },
+  "pillPlaceholder": {
+    "message": "Une idée ? Note-la pour la pause"
+  },
+  "blocksDone_one": {
+    "message": "$COUNT$ bloc au bout",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "blocksDone_other": {
+    "message": "$COUNT$ blocs au bout",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "announceEnd": {
+    "message": "Séance terminée"
+  },
+  "announceBreakOver": {
+    "message": "La pause est finie"
+  },
+  "announceBlockDone": {
+    "message": "Bloc terminé"
+  },
+  "errPageSilent": {
+    "message": "la page ne répond pas"
+  },
+  "errTimerMissing": {
+    "message": "le minuteur ne s’est pas installé dans la page"
+  },
+  "tPinLater": {
+    "message": "Le minuteur ne suivra pas sur les pages ouvertes ensuite"
+  },
+  "tAlarm": {
+    "message": "Le minuteur de la séance n’a pas pu être réglé"
+  },
+  "tBadge": {
+    "message": "Le chiffre de l’icône n’a pas pu être mis à jour"
+  },
+  "tTabs": {
+    "message": "Les autres onglets n’ont pas pu être préparés"
+  },
+  "tPinHere": {
+    "message": "Le minuteur ne peut pas s’afficher sur $PLACE$",
+    "placeholders": {
+      "place": {
+        "content": "$1"
+      }
+    }
+  },
+  "thisPage": {
+    "message": "cette page"
+  },
+  "tFullscreen": {
+    "message": "La fenêtre n’a pas pu passer en plein écran"
+  },
+  "nSessionOverBody_one": {
+    "message": "$COUNT$ bloc au bout. Les sites sont rouverts.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "nSessionOverBody_other": {
+    "message": "$COUNT$ blocs au bout. Les sites sont rouverts.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "nBreakTitle": {
+    "message": "Pause · $SPAN$",
+    "placeholders": {
+      "span": {
+        "content": "$1"
+      }
+    }
+  },
+  "nBreakBody": {
+    "message": "Bloc terminé : $DONE$. Ensuite : $NEXT$.",
+    "placeholders": {
+      "done": {
+        "content": "$1"
+      },
+      "next": {
+        "content": "$2"
+      }
+    }
+  },
+  "nBlockTitle": {
+    "message": "$TASK$ · $SPAN$",
+    "placeholders": {
+      "task": {
+        "content": "$1"
+      },
+      "span": {
+        "content": "$2"
+      }
+    }
+  },
+  "nBlockBody": {
+    "message": "La pause est finie. Bloc $N$ sur $TOTAL$.",
+    "placeholders": {
+      "n": {
+        "content": "$1"
+      },
+      "total": {
+        "content": "$2"
+      }
+    }
+  },
+  "defaultBlockName": {
+    "message": "Bloc $N$",
+    "placeholders": {
+      "n": {
+        "content": "$1"
+      }
+    }
+  },
+  "closedDuring": {
+    "message": "$HOST$ · fermé pendant le bloc",
+    "placeholders": {
+      "host": {
+        "content": "$1"
+      }
+    }
+  },
+  "backTo": {
+    "message": "Retourner sur $HOST$",
+    "placeholders": {
+      "host": {
+        "content": "$1"
+      }
+    }
+  },
+  "waitsForBreak": {
+    "message": "$HOST$ attend la pause",
+    "placeholders": {
+      "host": {
+        "content": "$1"
+      }
+    }
+  },
+  "openingIn": {
+    "message": "Ouverture dans $N$ s · cliquer pour annuler",
+    "placeholders": {
+      "n": {
+        "content": "$1"
+      }
+    }
+  },
+  "needIt": {
+    "message": "J’en ai besoin pour ce bloc"
+  },
+  "reopened": {
+    "message": "$HOST$ est rouvert",
+    "placeholders": {
+      "host": {
+        "content": "$1"
+      }
+    }
+  },
+  "itsBreak": {
+    "message": "C’est la pause"
+  },
+  "sessionOver": {
+    "message": "La séance est finie"
+  },
+  "resumeWith": {
+    "message": "Reprise : $TASK$",
+    "placeholders": {
+      "task": {
+        "content": "$1"
+      }
+    }
+  },
+  "blockedPlaceholder": {
+    "message": "Ce que tu voulais y faire ? Note-le pour la pause"
+  },
+  "noted": {
+    "message": "Noté. Tu le retrouveras à la pause, dans la bulle de Focus."
+  }
+}
