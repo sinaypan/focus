@@ -19,7 +19,7 @@ A Chrome extension for working in blocks: one task per block, fixed breaks, the 
 
 <img src="screenshots/popup.png" width="32%" alt="The popup before a session: three blocks, the break, and two switches"> <img src="screenshots/popup-run.png" width="32%" alt="The popup during a block"> <img src="screenshots/blocked.png" width="34%" alt="The page that replaces a closed site during a block">
 
-The interface follows the language of Chrome: English by default, French when Chrome is set to French. The course site in the screenshots is made up for the demonstration.
+The interface follows the language of Chrome: English by default, and also French, Spanish, Brazilian Portuguese, German, Italian, Russian, Turkish, Arabic, Japanese, Korean and Simplified Chinese. The course site in the screenshots is made up for the demonstration.
 
 ## Install
 

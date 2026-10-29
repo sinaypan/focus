@@ -1,0 +1,503 @@
+{
+  "extName": {
+    "message": "Focus"
+  },
+  "extDesc": {
+    "message": "Рабочие сессии блоками: одна задача за раз, фиксированные перерывы, вкладка одна во весь экран и таймер, который следует за вами на каждой странице."
+  },
+  "addBlock": {
+    "message": "Добавить блок"
+  },
+  "pauseBetween": {
+    "message": "Перерыв между блоками"
+  },
+  "pauseLength": {
+    "message": "Длительность перерыва"
+  },
+  "fullscreenOption": {
+    "message": "Вкладка одна, во весь экран"
+  },
+  "blockingOption": {
+    "message": "Закрывать сайты во время блоков"
+  },
+  "addSitePlaceholder": {
+    "message": "Добавьте сайт, например espn.com"
+  },
+  "addSite": {
+    "message": "Добавить сайт"
+  },
+  "start": {
+    "message": "Начать сессию"
+  },
+  "laterPlaceholder": {
+    "message": "Идея, желание? Запишите на перерыв"
+  },
+  "noteForLater": {
+    "message": "Записать на потом"
+  },
+  "stop": {
+    "message": "Остановить сессию"
+  },
+  "laterTitle": {
+    "message": "Посмотреть потом"
+  },
+  "firstTask": {
+    "message": "Какая задача?"
+  },
+  "nextTask": {
+    "message": "Что дальше?"
+  },
+  "blockTask": {
+    "message": "Задача блока $N$",
+    "placeholders": {
+      "n": {
+        "content": "$1"
+      }
+    }
+  },
+  "blockLength": {
+    "message": "Длительность блока $N$, в минутах",
+    "placeholders": {
+      "n": {
+        "content": "$1"
+      }
+    }
+  },
+  "shorter": {
+    "message": "Короче"
+  },
+  "longer": {
+    "message": "Длиннее"
+  },
+  "removeBlock": {
+    "message": "Удалить этот блок"
+  },
+  "minUnit": {
+    "message": "мин"
+  },
+  "stopClosing": {
+    "message": "Больше не закрывать $SITE$",
+    "placeholders": {
+      "site": {
+        "content": "$1"
+      }
+    }
+  },
+  "siteError": {
+    "message": "Введите адрес сайта, например espn.com"
+  },
+  "totalEnds": {
+    "message": "$SPAN$ · закончится в $TIME$",
+    "placeholders": {
+      "span": {
+        "content": "$1"
+      },
+      "time": {
+        "content": "$2"
+      }
+    }
+  },
+  "blockOf": {
+    "message": "Блок $N$ из $TOTAL$",
+    "placeholders": {
+      "n": {
+        "content": "$1"
+      },
+      "total": {
+        "content": "$2"
+      }
+    }
+  },
+  "blockOfDone": {
+    "message": "Блок $N$ из $TOTAL$ выполнен",
+    "placeholders": {
+      "n": {
+        "content": "$1"
+      },
+      "total": {
+        "content": "$2"
+      }
+    }
+  },
+  "pause": {
+    "message": "Перерыв"
+  },
+  "lastBlock": {
+    "message": "Последний блок сессии"
+  },
+  "sessionHeld": {
+    "message": "Сессия на паузе"
+  },
+  "nextPauseThen": {
+    "message": "Дальше: перерыв $SPAN$, затем $TASK$",
+    "placeholders": {
+      "span": {
+        "content": "$1"
+      },
+      "task": {
+        "content": "$2"
+      }
+    }
+  },
+  "nextTaskSpan": {
+    "message": "Дальше: $TASK$ · $SPAN$",
+    "placeholders": {
+      "task": {
+        "content": "$1"
+      },
+      "span": {
+        "content": "$2"
+      }
+    }
+  },
+  "resume": {
+    "message": "Продолжить"
+  },
+  "hold": {
+    "message": "Пауза"
+  },
+  "finishedBlock": {
+    "message": "Я закончил этот блок"
+  },
+  "endBreak": {
+    "message": "Закончить перерыв"
+  },
+  "clickAgain": {
+    "message": "Нажмите ещё раз, чтобы остановить"
+  },
+  "notesForBreak_one": {
+    "message": "$COUNT$ заметка на перерыв",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "notesForBreak_few": {
+    "message": "$COUNT$ заметки на перерыв",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "notesForBreak_many": {
+    "message": "$COUNT$ заметок на перерыв",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "notesForBreak_other": {
+    "message": "$COUNT$ заметки на перерыв",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "done": {
+    "message": "Готово"
+  },
+  "todayDone_one": {
+    "message": "Сегодня: $COUNT$ блок выполнен · $SPAN$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      },
+      "span": {
+        "content": "$2"
+      }
+    }
+  },
+  "todayDone_few": {
+    "message": "Сегодня: $COUNT$ блока выполнено · $SPAN$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      },
+      "span": {
+        "content": "$2"
+      }
+    }
+  },
+  "todayDone_many": {
+    "message": "Сегодня: $COUNT$ блоков выполнено · $SPAN$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      },
+      "span": {
+        "content": "$2"
+      }
+    }
+  },
+  "todayDone_other": {
+    "message": "Сегодня: $COUNT$ блока выполнено · $SPAN$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      },
+      "span": {
+        "content": "$2"
+      }
+    }
+  },
+  "spanMin": {
+    "message": "$M$ мин",
+    "placeholders": {
+      "m": {
+        "content": "$1"
+      }
+    }
+  },
+  "spanHours": {
+    "message": "$H$ ч",
+    "placeholders": {
+      "h": {
+        "content": "$1"
+      }
+    }
+  },
+  "spanHoursMin": {
+    "message": "$H$ ч $M$ мин",
+    "placeholders": {
+      "h": {
+        "content": "$1"
+      },
+      "m": {
+        "content": "$2"
+      }
+    }
+  },
+  "openTimer": {
+    "message": "Открыть таймер"
+  },
+  "changeCorner": {
+    "message": "Сменить угол"
+  },
+  "fold": {
+    "message": "Свернуть"
+  },
+  "pillPlaceholder": {
+    "message": "Идея? Запишите на перерыв"
+  },
+  "blocksDone_one": {
+    "message": "$COUNT$ блок выполнен",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "blocksDone_few": {
+    "message": "$COUNT$ блока выполнено",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "blocksDone_many": {
+    "message": "$COUNT$ блоков выполнено",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "blocksDone_other": {
+    "message": "$COUNT$ блока выполнено",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "announceEnd": {
+    "message": "Сессия окончена"
+  },
+  "announceBreakOver": {
+    "message": "Перерыв закончился"
+  },
+  "announceBlockDone": {
+    "message": "Блок выполнен"
+  },
+  "errPageSilent": {
+    "message": "страница не отвечает"
+  },
+  "errTimerMissing": {
+    "message": "таймер не встроился в страницу"
+  },
+  "tPinLater": {
+    "message": "Таймер не появится на страницах, открытых позже"
+  },
+  "tAlarm": {
+    "message": "Не удалось запустить таймер сессии"
+  },
+  "tBadge": {
+    "message": "Не удалось обновить число на значке"
+  },
+  "tTabs": {
+    "message": "Не удалось подготовить другие вкладки"
+  },
+  "tPinHere": {
+    "message": "Таймер не может появиться на $PLACE$",
+    "placeholders": {
+      "place": {
+        "content": "$1"
+      }
+    }
+  },
+  "thisPage": {
+    "message": "этой странице"
+  },
+  "tFullscreen": {
+    "message": "Окно не смогло перейти в полноэкранный режим"
+  },
+  "nSessionOverBody_one": {
+    "message": "$COUNT$ блок выполнен. Сайты снова открыты.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "nSessionOverBody_few": {
+    "message": "$COUNT$ блока выполнено. Сайты снова открыты.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "nSessionOverBody_many": {
+    "message": "$COUNT$ блоков выполнено. Сайты снова открыты.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "nSessionOverBody_other": {
+    "message": "$COUNT$ блока выполнено. Сайты снова открыты.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "nBreakTitle": {
+    "message": "Перерыв · $SPAN$",
+    "placeholders": {
+      "span": {
+        "content": "$1"
+      }
+    }
+  },
+  "nBreakBody": {
+    "message": "Блок выполнен: $DONE$. Дальше: $NEXT$.",
+    "placeholders": {
+      "done": {
+        "content": "$1"
+      },
+      "next": {
+        "content": "$2"
+      }
+    }
+  },
+  "nBlockTitle": {
+    "message": "$TASK$ · $SPAN$",
+    "placeholders": {
+      "task": {
+        "content": "$1"
+      },
+      "span": {
+        "content": "$2"
+      }
+    }
+  },
+  "nBlockBody": {
+    "message": "Перерыв закончился. Блок $N$ из $TOTAL$.",
+    "placeholders": {
+      "n": {
+        "content": "$1"
+      },
+      "total": {
+        "content": "$2"
+      }
+    }
+  },
+  "defaultBlockName": {
+    "message": "Блок $N$",
+    "placeholders": {
+      "n": {
+        "content": "$1"
+      }
+    }
+  },
+  "closedDuring": {
+    "message": "$HOST$ · закрыт во время блока",
+    "placeholders": {
+      "host": {
+        "content": "$1"
+      }
+    }
+  },
+  "backTo": {
+    "message": "Вернуться на $HOST$",
+    "placeholders": {
+      "host": {
+        "content": "$1"
+      }
+    }
+  },
+  "waitsForBreak": {
+    "message": "$HOST$ подождёт до перерыва",
+    "placeholders": {
+      "host": {
+        "content": "$1"
+      }
+    }
+  },
+  "openingIn": {
+    "message": "Откроется через $N$ с · нажмите, чтобы отменить",
+    "placeholders": {
+      "n": {
+        "content": "$1"
+      }
+    }
+  },
+  "needIt": {
+    "message": "Он нужен мне для этого блока"
+  },
+  "reopened": {
+    "message": "$HOST$ снова открыт",
+    "placeholders": {
+      "host": {
+        "content": "$1"
+      }
+    }
+  },
+  "itsBreak": {
+    "message": "Перерыв"
+  },
+  "sessionOver": {
+    "message": "Сессия окончена"
+  },
+  "resumeWith": {
+    "message": "Возвращаемся к: $TASK$",
+    "placeholders": {
+      "task": {
+        "content": "$1"
+      }
+    }
+  },
+  "blockedPlaceholder": {
+    "message": "Что вы хотели там сделать? Запишите на перерыв"
+  },
+  "noted": {
+    "message": "Записано. Вы найдёте это в перерыве, в пузыре Focus."
+  }
+}

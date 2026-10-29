@@ -1,0 +1,398 @@
+{
+  "extName": {
+    "message": "Focus"
+  },
+  "extDesc": {
+    "message": "블록 단위 작업 세션: 한 번에 한 가지 작업, 정해진 휴식, 전체 화면에 탭 하나, 모든 페이지에서 따라오는 타이머."
+  },
+  "addBlock": {
+    "message": "블록 추가"
+  },
+  "pauseBetween": {
+    "message": "블록 사이 휴식"
+  },
+  "pauseLength": {
+    "message": "휴식 시간"
+  },
+  "fullscreenOption": {
+    "message": "탭 하나만, 전체 화면으로"
+  },
+  "blockingOption": {
+    "message": "블록 동안 사이트 닫기"
+  },
+  "addSitePlaceholder": {
+    "message": "사이트 추가 (예: espn.com)"
+  },
+  "addSite": {
+    "message": "사이트 추가"
+  },
+  "start": {
+    "message": "세션 시작"
+  },
+  "laterPlaceholder": {
+    "message": "아이디어나 하고 싶은 게 있나요? 휴식용으로 메모하세요"
+  },
+  "noteForLater": {
+    "message": "나중을 위해 메모"
+  },
+  "stop": {
+    "message": "세션 중지"
+  },
+  "laterTitle": {
+    "message": "나중에 볼 것"
+  },
+  "firstTask": {
+    "message": "어떤 작업인가요?"
+  },
+  "nextTask": {
+    "message": "다음은?"
+  },
+  "blockTask": {
+    "message": "블록 $N$의 작업",
+    "placeholders": {
+      "n": {
+        "content": "$1"
+      }
+    }
+  },
+  "blockLength": {
+    "message": "블록 $N$의 길이(분)",
+    "placeholders": {
+      "n": {
+        "content": "$1"
+      }
+    }
+  },
+  "shorter": {
+    "message": "짧게"
+  },
+  "longer": {
+    "message": "길게"
+  },
+  "removeBlock": {
+    "message": "이 블록 삭제"
+  },
+  "minUnit": {
+    "message": "분"
+  },
+  "stopClosing": {
+    "message": "$SITE$ 닫지 않기",
+    "placeholders": {
+      "site": {
+        "content": "$1"
+      }
+    }
+  },
+  "siteError": {
+    "message": "사이트 주소를 입력하세요 (예: espn.com)"
+  },
+  "totalEnds": {
+    "message": "$SPAN$ · $TIME$에 종료",
+    "placeholders": {
+      "span": {
+        "content": "$1"
+      },
+      "time": {
+        "content": "$2"
+      }
+    }
+  },
+  "blockOf": {
+    "message": "블록 $N$/$TOTAL$",
+    "placeholders": {
+      "n": {
+        "content": "$1"
+      },
+      "total": {
+        "content": "$2"
+      }
+    }
+  },
+  "blockOfDone": {
+    "message": "블록 $N$/$TOTAL$ 완료",
+    "placeholders": {
+      "n": {
+        "content": "$1"
+      },
+      "total": {
+        "content": "$2"
+      }
+    }
+  },
+  "pause": {
+    "message": "휴식"
+  },
+  "lastBlock": {
+    "message": "세션의 마지막 블록"
+  },
+  "sessionHeld": {
+    "message": "세션 일시 중지됨"
+  },
+  "nextPauseThen": {
+    "message": "다음: $SPAN$ 휴식 후 $TASK$",
+    "placeholders": {
+      "span": {
+        "content": "$1"
+      },
+      "task": {
+        "content": "$2"
+      }
+    }
+  },
+  "nextTaskSpan": {
+    "message": "다음: $TASK$ · $SPAN$",
+    "placeholders": {
+      "task": {
+        "content": "$1"
+      },
+      "span": {
+        "content": "$2"
+      }
+    }
+  },
+  "resume": {
+    "message": "계속"
+  },
+  "hold": {
+    "message": "일시 중지"
+  },
+  "finishedBlock": {
+    "message": "이 블록을 마쳤어요"
+  },
+  "endBreak": {
+    "message": "휴식 끝내기"
+  },
+  "clickAgain": {
+    "message": "중지하려면 다시 클릭"
+  },
+  "notesForBreak_other": {
+    "message": "휴식용 메모 $COUNT$개",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "done": {
+    "message": "완료"
+  },
+  "todayDone_other": {
+    "message": "오늘: 블록 $COUNT$개 완료 · $SPAN$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      },
+      "span": {
+        "content": "$2"
+      }
+    }
+  },
+  "spanMin": {
+    "message": "$M$분",
+    "placeholders": {
+      "m": {
+        "content": "$1"
+      }
+    }
+  },
+  "spanHours": {
+    "message": "$H$시간",
+    "placeholders": {
+      "h": {
+        "content": "$1"
+      }
+    }
+  },
+  "spanHoursMin": {
+    "message": "$H$시간 $M$분",
+    "placeholders": {
+      "h": {
+        "content": "$1"
+      },
+      "m": {
+        "content": "$2"
+      }
+    }
+  },
+  "openTimer": {
+    "message": "타이머 열기"
+  },
+  "changeCorner": {
+    "message": "모서리 바꾸기"
+  },
+  "fold": {
+    "message": "접기"
+  },
+  "pillPlaceholder": {
+    "message": "아이디어가 있나요? 휴식용으로 메모하세요"
+  },
+  "blocksDone_other": {
+    "message": "블록 $COUNT$개 완료",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "announceEnd": {
+    "message": "세션 종료"
+  },
+  "announceBreakOver": {
+    "message": "휴식이 끝났습니다"
+  },
+  "announceBlockDone": {
+    "message": "블록 완료"
+  },
+  "errPageSilent": {
+    "message": "페이지가 응답하지 않습니다"
+  },
+  "errTimerMissing": {
+    "message": "타이머가 페이지에 설치되지 않았습니다"
+  },
+  "tPinLater": {
+    "message": "나중에 연 페이지에는 타이머가 따라가지 않습니다"
+  },
+  "tAlarm": {
+    "message": "세션 타이머를 설정할 수 없습니다"
+  },
+  "tBadge": {
+    "message": "아이콘의 숫자를 업데이트할 수 없습니다"
+  },
+  "tTabs": {
+    "message": "다른 탭을 준비할 수 없습니다"
+  },
+  "tPinHere": {
+    "message": "$PLACE$에는 타이머를 표시할 수 없습니다",
+    "placeholders": {
+      "place": {
+        "content": "$1"
+      }
+    }
+  },
+  "thisPage": {
+    "message": "이 페이지"
+  },
+  "tFullscreen": {
+    "message": "창을 전체 화면으로 전환할 수 없습니다"
+  },
+  "nSessionOverBody_other": {
+    "message": "블록 $COUNT$개 완료. 사이트가 다시 열립니다.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "nBreakTitle": {
+    "message": "휴식 · $SPAN$",
+    "placeholders": {
+      "span": {
+        "content": "$1"
+      }
+    }
+  },
+  "nBreakBody": {
+    "message": "블록 완료: $DONE$. 다음: $NEXT$.",
+    "placeholders": {
+      "done": {
+        "content": "$1"
+      },
+      "next": {
+        "content": "$2"
+      }
+    }
+  },
+  "nBlockTitle": {
+    "message": "$TASK$ · $SPAN$",
+    "placeholders": {
+      "task": {
+        "content": "$1"
+      },
+      "span": {
+        "content": "$2"
+      }
+    }
+  },
+  "nBlockBody": {
+    "message": "휴식이 끝났습니다. 블록 $N$/$TOTAL$.",
+    "placeholders": {
+      "n": {
+        "content": "$1"
+      },
+      "total": {
+        "content": "$2"
+      }
+    }
+  },
+  "defaultBlockName": {
+    "message": "블록 $N$",
+    "placeholders": {
+      "n": {
+        "content": "$1"
+      }
+    }
+  },
+  "closedDuring": {
+    "message": "$HOST$ · 블록 동안 닫힘",
+    "placeholders": {
+      "host": {
+        "content": "$1"
+      }
+    }
+  },
+  "backTo": {
+    "message": "$HOST$(으)로 돌아가기",
+    "placeholders": {
+      "host": {
+        "content": "$1"
+      }
+    }
+  },
+  "waitsForBreak": {
+    "message": "$HOST$은(는) 휴식 때까지 대기",
+    "placeholders": {
+      "host": {
+        "content": "$1"
+      }
+    }
+  },
+  "openingIn": {
+    "message": "$N$초 후 열림 · 클릭하여 취소",
+    "placeholders": {
+      "n": {
+        "content": "$1"
+      }
+    }
+  },
+  "needIt": {
+    "message": "이 블록에 필요해요"
+  },
+  "reopened": {
+    "message": "$HOST$이(가) 다시 열렸습니다",
+    "placeholders": {
+      "host": {
+        "content": "$1"
+      }
+    }
+  },
+  "itsBreak": {
+    "message": "휴식 시간입니다"
+  },
+  "sessionOver": {
+    "message": "세션이 끝났습니다"
+  },
+  "resumeWith": {
+    "message": "다시 시작: $TASK$",
+    "placeholders": {
+      "task": {
+        "content": "$1"
+      }
+    }
+  },
+  "blockedPlaceholder": {
+    "message": "거기서 무엇을 하려고 했나요? 휴식용으로 메모하세요"
+  },
+  "noted": {
+    "message": "메모했습니다. 휴식 때 Focus 풍선에서 볼 수 있어요."
+  }
+}

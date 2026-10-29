@@ -1,0 +1,398 @@
+{
+  "extName": {
+    "message": "Focus"
+  },
+  "extDesc": {
+    "message": "ブロック単位の作業セッション：一度にひとつのタスク、決まった休憩、全画面でタブひとつ、どのページでもついてくるタイマー。"
+  },
+  "addBlock": {
+    "message": "ブロックを追加"
+  },
+  "pauseBetween": {
+    "message": "ブロック間の休憩"
+  },
+  "pauseLength": {
+    "message": "休憩の長さ"
+  },
+  "fullscreenOption": {
+    "message": "タブひとつ、全画面で"
+  },
+  "blockingOption": {
+    "message": "ブロック中はサイトを閉じる"
+  },
+  "addSitePlaceholder": {
+    "message": "サイトを追加（例：espn.com）"
+  },
+  "addSite": {
+    "message": "サイトを追加"
+  },
+  "start": {
+    "message": "セッションを開始"
+  },
+  "laterPlaceholder": {
+    "message": "アイデアや衝動は？休憩用にメモ"
+  },
+  "noteForLater": {
+    "message": "あとでメモ"
+  },
+  "stop": {
+    "message": "セッションを終了"
+  },
+  "laterTitle": {
+    "message": "あとで見る"
+  },
+  "firstTask": {
+    "message": "どのタスク？"
+  },
+  "nextTask": {
+    "message": "次は？"
+  },
+  "blockTask": {
+    "message": "ブロック $N$ のタスク",
+    "placeholders": {
+      "n": {
+        "content": "$1"
+      }
+    }
+  },
+  "blockLength": {
+    "message": "ブロック $N$ の長さ（分）",
+    "placeholders": {
+      "n": {
+        "content": "$1"
+      }
+    }
+  },
+  "shorter": {
+    "message": "短く"
+  },
+  "longer": {
+    "message": "長く"
+  },
+  "removeBlock": {
+    "message": "このブロックを削除"
+  },
+  "minUnit": {
+    "message": "分"
+  },
+  "stopClosing": {
+    "message": "$SITE$ を閉じない",
+    "placeholders": {
+      "site": {
+        "content": "$1"
+      }
+    }
+  },
+  "siteError": {
+    "message": "サイトのアドレスを入力してください（例：espn.com）"
+  },
+  "totalEnds": {
+    "message": "$SPAN$ · $TIME$ に終了",
+    "placeholders": {
+      "span": {
+        "content": "$1"
+      },
+      "time": {
+        "content": "$2"
+      }
+    }
+  },
+  "blockOf": {
+    "message": "ブロック $N$ / $TOTAL$",
+    "placeholders": {
+      "n": {
+        "content": "$1"
+      },
+      "total": {
+        "content": "$2"
+      }
+    }
+  },
+  "blockOfDone": {
+    "message": "ブロック $N$ / $TOTAL$ 完了",
+    "placeholders": {
+      "n": {
+        "content": "$1"
+      },
+      "total": {
+        "content": "$2"
+      }
+    }
+  },
+  "pause": {
+    "message": "休憩"
+  },
+  "lastBlock": {
+    "message": "セッション最後のブロック"
+  },
+  "sessionHeld": {
+    "message": "セッション一時停止中"
+  },
+  "nextPauseThen": {
+    "message": "次：$SPAN$ の休憩、その後 $TASK$",
+    "placeholders": {
+      "span": {
+        "content": "$1"
+      },
+      "task": {
+        "content": "$2"
+      }
+    }
+  },
+  "nextTaskSpan": {
+    "message": "次：$TASK$ · $SPAN$",
+    "placeholders": {
+      "task": {
+        "content": "$1"
+      },
+      "span": {
+        "content": "$2"
+      }
+    }
+  },
+  "resume": {
+    "message": "再開"
+  },
+  "hold": {
+    "message": "一時停止"
+  },
+  "finishedBlock": {
+    "message": "このブロックを終えた"
+  },
+  "endBreak": {
+    "message": "休憩を終える"
+  },
+  "clickAgain": {
+    "message": "もう一度クリックで終了"
+  },
+  "notesForBreak_other": {
+    "message": "休憩用メモ $COUNT$ 件",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "done": {
+    "message": "完了"
+  },
+  "todayDone_other": {
+    "message": "今日：$COUNT$ ブロック完了 · $SPAN$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      },
+      "span": {
+        "content": "$2"
+      }
+    }
+  },
+  "spanMin": {
+    "message": "$M$ 分",
+    "placeholders": {
+      "m": {
+        "content": "$1"
+      }
+    }
+  },
+  "spanHours": {
+    "message": "$H$ 時間",
+    "placeholders": {
+      "h": {
+        "content": "$1"
+      }
+    }
+  },
+  "spanHoursMin": {
+    "message": "$H$ 時間 $M$ 分",
+    "placeholders": {
+      "h": {
+        "content": "$1"
+      },
+      "m": {
+        "content": "$2"
+      }
+    }
+  },
+  "openTimer": {
+    "message": "タイマーを開く"
+  },
+  "changeCorner": {
+    "message": "角を変える"
+  },
+  "fold": {
+    "message": "折りたたむ"
+  },
+  "pillPlaceholder": {
+    "message": "アイデアは？休憩用にメモ"
+  },
+  "blocksDone_other": {
+    "message": "$COUNT$ ブロック完了",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "announceEnd": {
+    "message": "セッション終了"
+  },
+  "announceBreakOver": {
+    "message": "休憩が終わりました"
+  },
+  "announceBlockDone": {
+    "message": "ブロック完了"
+  },
+  "errPageSilent": {
+    "message": "ページが応答しません"
+  },
+  "errTimerMissing": {
+    "message": "タイマーがページに入りませんでした"
+  },
+  "tPinLater": {
+    "message": "後から開いたページにはタイマーが表示されません"
+  },
+  "tAlarm": {
+    "message": "セッションのタイマーを設定できませんでした"
+  },
+  "tBadge": {
+    "message": "アイコンの数字を更新できませんでした"
+  },
+  "tTabs": {
+    "message": "ほかのタブを準備できませんでした"
+  },
+  "tPinHere": {
+    "message": "$PLACE$ にはタイマーを表示できません",
+    "placeholders": {
+      "place": {
+        "content": "$1"
+      }
+    }
+  },
+  "thisPage": {
+    "message": "このページ"
+  },
+  "tFullscreen": {
+    "message": "ウィンドウを全画面にできませんでした"
+  },
+  "nSessionOverBody_other": {
+    "message": "$COUNT$ ブロック完了。サイトは再び開けます。",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "nBreakTitle": {
+    "message": "休憩 · $SPAN$",
+    "placeholders": {
+      "span": {
+        "content": "$1"
+      }
+    }
+  },
+  "nBreakBody": {
+    "message": "ブロック完了：$DONE$。次：$NEXT$。",
+    "placeholders": {
+      "done": {
+        "content": "$1"
+      },
+      "next": {
+        "content": "$2"
+      }
+    }
+  },
+  "nBlockTitle": {
+    "message": "$TASK$ · $SPAN$",
+    "placeholders": {
+      "task": {
+        "content": "$1"
+      },
+      "span": {
+        "content": "$2"
+      }
+    }
+  },
+  "nBlockBody": {
+    "message": "休憩が終わりました。ブロック $N$ / $TOTAL$。",
+    "placeholders": {
+      "n": {
+        "content": "$1"
+      },
+      "total": {
+        "content": "$2"
+      }
+    }
+  },
+  "defaultBlockName": {
+    "message": "ブロック $N$",
+    "placeholders": {
+      "n": {
+        "content": "$1"
+      }
+    }
+  },
+  "closedDuring": {
+    "message": "$HOST$ · ブロック中は閉じています",
+    "placeholders": {
+      "host": {
+        "content": "$1"
+      }
+    }
+  },
+  "backTo": {
+    "message": "$HOST$ に戻る",
+    "placeholders": {
+      "host": {
+        "content": "$1"
+      }
+    }
+  },
+  "waitsForBreak": {
+    "message": "$HOST$ は休憩まで待機",
+    "placeholders": {
+      "host": {
+        "content": "$1"
+      }
+    }
+  },
+  "openingIn": {
+    "message": "$N$ 秒後に開きます · クリックでキャンセル",
+    "placeholders": {
+      "n": {
+        "content": "$1"
+      }
+    }
+  },
+  "needIt": {
+    "message": "このブロックで必要です"
+  },
+  "reopened": {
+    "message": "$HOST$ を再び開けます",
+    "placeholders": {
+      "host": {
+        "content": "$1"
+      }
+    }
+  },
+  "itsBreak": {
+    "message": "休憩の時間です"
+  },
+  "sessionOver": {
+    "message": "セッションが終わりました"
+  },
+  "resumeWith": {
+    "message": "再開：$TASK$",
+    "placeholders": {
+      "task": {
+        "content": "$1"
+      }
+    }
+  },
+  "blockedPlaceholder": {
+    "message": "そこで何をしたかった？休憩用にメモ"
+  },
+  "noted": {
+    "message": "メモしました。休憩時に Focus のバブルで確認できます。"
+  }
+}

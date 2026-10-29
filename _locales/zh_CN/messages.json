@@ -1,0 +1,398 @@
+{
+  "extName": {
+    "message": "Focus"
+  },
+  "extDesc": {
+    "message": "分块的工作时段：一次只做一件事，固定休息，标签页单独全屏，计时器在每个页面都跟着你。"
+  },
+  "addBlock": {
+    "message": "添加时段"
+  },
+  "pauseBetween": {
+    "message": "时段之间休息"
+  },
+  "pauseLength": {
+    "message": "休息时长"
+  },
+  "fullscreenOption": {
+    "message": "标签页单独全屏"
+  },
+  "blockingOption": {
+    "message": "专注时段内关闭网站"
+  },
+  "addSitePlaceholder": {
+    "message": "添加网站，例如 espn.com"
+  },
+  "addSite": {
+    "message": "添加网站"
+  },
+  "start": {
+    "message": "开始专注"
+  },
+  "laterPlaceholder": {
+    "message": "有想法或冲动？记下来留到休息时"
+  },
+  "noteForLater": {
+    "message": "记下留到以后"
+  },
+  "stop": {
+    "message": "结束专注"
+  },
+  "laterTitle": {
+    "message": "稍后再看"
+  },
+  "firstTask": {
+    "message": "做什么任务？"
+  },
+  "nextTask": {
+    "message": "接下来做什么？"
+  },
+  "blockTask": {
+    "message": "第 $N$ 个时段的任务",
+    "placeholders": {
+      "n": {
+        "content": "$1"
+      }
+    }
+  },
+  "blockLength": {
+    "message": "第 $N$ 个时段的时长（分钟）",
+    "placeholders": {
+      "n": {
+        "content": "$1"
+      }
+    }
+  },
+  "shorter": {
+    "message": "缩短"
+  },
+  "longer": {
+    "message": "延长"
+  },
+  "removeBlock": {
+    "message": "删除此时段"
+  },
+  "minUnit": {
+    "message": "分钟"
+  },
+  "stopClosing": {
+    "message": "不再关闭 $SITE$",
+    "placeholders": {
+      "site": {
+        "content": "$1"
+      }
+    }
+  },
+  "siteError": {
+    "message": "请输入网站地址，例如 espn.com"
+  },
+  "totalEnds": {
+    "message": "$SPAN$ · $TIME$ 结束",
+    "placeholders": {
+      "span": {
+        "content": "$1"
+      },
+      "time": {
+        "content": "$2"
+      }
+    }
+  },
+  "blockOf": {
+    "message": "第 $N$ / $TOTAL$ 个时段",
+    "placeholders": {
+      "n": {
+        "content": "$1"
+      },
+      "total": {
+        "content": "$2"
+      }
+    }
+  },
+  "blockOfDone": {
+    "message": "第 $N$ / $TOTAL$ 个时段已完成",
+    "placeholders": {
+      "n": {
+        "content": "$1"
+      },
+      "total": {
+        "content": "$2"
+      }
+    }
+  },
+  "pause": {
+    "message": "休息"
+  },
+  "lastBlock": {
+    "message": "最后一个时段"
+  },
+  "sessionHeld": {
+    "message": "专注已暂停"
+  },
+  "nextPauseThen": {
+    "message": "接下来：休息 $SPAN$，然后 $TASK$",
+    "placeholders": {
+      "span": {
+        "content": "$1"
+      },
+      "task": {
+        "content": "$2"
+      }
+    }
+  },
+  "nextTaskSpan": {
+    "message": "接下来：$TASK$ · $SPAN$",
+    "placeholders": {
+      "task": {
+        "content": "$1"
+      },
+      "span": {
+        "content": "$2"
+      }
+    }
+  },
+  "resume": {
+    "message": "继续"
+  },
+  "hold": {
+    "message": "暂停"
+  },
+  "finishedBlock": {
+    "message": "我完成了这个时段"
+  },
+  "endBreak": {
+    "message": "结束休息"
+  },
+  "clickAgain": {
+    "message": "再次点击以结束"
+  },
+  "notesForBreak_other": {
+    "message": "$COUNT$ 条留到休息的笔记",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "done": {
+    "message": "完成"
+  },
+  "todayDone_other": {
+    "message": "今天：完成 $COUNT$ 个时段 · $SPAN$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      },
+      "span": {
+        "content": "$2"
+      }
+    }
+  },
+  "spanMin": {
+    "message": "$M$ 分钟",
+    "placeholders": {
+      "m": {
+        "content": "$1"
+      }
+    }
+  },
+  "spanHours": {
+    "message": "$H$ 小时",
+    "placeholders": {
+      "h": {
+        "content": "$1"
+      }
+    }
+  },
+  "spanHoursMin": {
+    "message": "$H$ 小时 $M$ 分钟",
+    "placeholders": {
+      "h": {
+        "content": "$1"
+      },
+      "m": {
+        "content": "$2"
+      }
+    }
+  },
+  "openTimer": {
+    "message": "打开计时器"
+  },
+  "changeCorner": {
+    "message": "换个角落"
+  },
+  "fold": {
+    "message": "收起"
+  },
+  "pillPlaceholder": {
+    "message": "有想法？记下来留到休息时"
+  },
+  "blocksDone_other": {
+    "message": "完成 $COUNT$ 个时段",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "announceEnd": {
+    "message": "专注结束"
+  },
+  "announceBreakOver": {
+    "message": "休息结束"
+  },
+  "announceBlockDone": {
+    "message": "时段完成"
+  },
+  "errPageSilent": {
+    "message": "页面没有响应"
+  },
+  "errTimerMissing": {
+    "message": "计时器未能装入页面"
+  },
+  "tPinLater": {
+    "message": "之后打开的页面不会显示计时器"
+  },
+  "tAlarm": {
+    "message": "无法设置专注计时器"
+  },
+  "tBadge": {
+    "message": "无法更新图标上的数字"
+  },
+  "tTabs": {
+    "message": "无法准备其他标签页"
+  },
+  "tPinHere": {
+    "message": "计时器无法显示在$PLACE$",
+    "placeholders": {
+      "place": {
+        "content": "$1"
+      }
+    }
+  },
+  "thisPage": {
+    "message": "此页面"
+  },
+  "tFullscreen": {
+    "message": "窗口无法进入全屏"
+  },
+  "nSessionOverBody_other": {
+    "message": "完成 $COUNT$ 个时段。网站已重新开放。",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "nBreakTitle": {
+    "message": "休息 · $SPAN$",
+    "placeholders": {
+      "span": {
+        "content": "$1"
+      }
+    }
+  },
+  "nBreakBody": {
+    "message": "时段完成：$DONE$。接下来：$NEXT$。",
+    "placeholders": {
+      "done": {
+        "content": "$1"
+      },
+      "next": {
+        "content": "$2"
+      }
+    }
+  },
+  "nBlockTitle": {
+    "message": "$TASK$ · $SPAN$",
+    "placeholders": {
+      "task": {
+        "content": "$1"
+      },
+      "span": {
+        "content": "$2"
+      }
+    }
+  },
+  "nBlockBody": {
+    "message": "休息结束。第 $N$ / $TOTAL$ 个时段。",
+    "placeholders": {
+      "n": {
+        "content": "$1"
+      },
+      "total": {
+        "content": "$2"
+      }
+    }
+  },
+  "defaultBlockName": {
+    "message": "时段 $N$",
+    "placeholders": {
+      "n": {
+        "content": "$1"
+      }
+    }
+  },
+  "closedDuring": {
+    "message": "$HOST$ · 专注时段内已关闭",
+    "placeholders": {
+      "host": {
+        "content": "$1"
+      }
+    }
+  },
+  "backTo": {
+    "message": "回到 $HOST$",
+    "placeholders": {
+      "host": {
+        "content": "$1"
+      }
+    }
+  },
+  "waitsForBreak": {
+    "message": "$HOST$ 等到休息时再开",
+    "placeholders": {
+      "host": {
+        "content": "$1"
+      }
+    }
+  },
+  "openingIn": {
+    "message": "$N$ 秒后打开 · 点击取消",
+    "placeholders": {
+      "n": {
+        "content": "$1"
+      }
+    }
+  },
+  "needIt": {
+    "message": "这个时段我需要它"
+  },
+  "reopened": {
+    "message": "$HOST$ 已重新开放",
+    "placeholders": {
+      "host": {
+        "content": "$1"
+      }
+    }
+  },
+  "itsBreak": {
+    "message": "休息时间到了"
+  },
+  "sessionOver": {
+    "message": "专注已结束"
+  },
+  "resumeWith": {
+    "message": "回到：$TASK$",
+    "placeholders": {
+      "task": {
+        "content": "$1"
+      }
+    }
+  },
+  "blockedPlaceholder": {
+    "message": "你想在那里做什么？记下来留到休息时"
+  },
+  "noted": {
+    "message": "已记下。休息时可在 Focus 气泡里找到。"
+  }
+}

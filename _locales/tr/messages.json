@@ -1,0 +1,433 @@
+{
+  "extName": {
+    "message": "Focus"
+  },
+  "extDesc": {
+    "message": "Bloklar halinde çalışma oturumları: her seferinde tek görev, sabit molalar, tam ekranda tek başına sekme ve her sayfada sizi izleyen bir zamanlayıcı."
+  },
+  "addBlock": {
+    "message": "Blok ekle"
+  },
+  "pauseBetween": {
+    "message": "Bloklar arası mola"
+  },
+  "pauseLength": {
+    "message": "Mola süresi"
+  },
+  "fullscreenOption": {
+    "message": "Sekme tek başına, tam ekran"
+  },
+  "blockingOption": {
+    "message": "Bloklar sırasında siteleri kapat"
+  },
+  "addSitePlaceholder": {
+    "message": "Bir site ekleyin, örneğin espn.com"
+  },
+  "addSite": {
+    "message": "Site ekle"
+  },
+  "start": {
+    "message": "Oturumu başlat"
+  },
+  "laterPlaceholder": {
+    "message": "Bir fikir, bir istek mi? Mola için not alın"
+  },
+  "noteForLater": {
+    "message": "Sonrası için not al"
+  },
+  "stop": {
+    "message": "Oturumu durdur"
+  },
+  "laterTitle": {
+    "message": "Sonra bakılacaklar"
+  },
+  "firstTask": {
+    "message": "Hangi görev?"
+  },
+  "nextTask": {
+    "message": "Sonra ne?"
+  },
+  "blockTask": {
+    "message": "$N$. bloğun görevi",
+    "placeholders": {
+      "n": {
+        "content": "$1"
+      }
+    }
+  },
+  "blockLength": {
+    "message": "$N$. bloğun süresi, dakika",
+    "placeholders": {
+      "n": {
+        "content": "$1"
+      }
+    }
+  },
+  "shorter": {
+    "message": "Daha kısa"
+  },
+  "longer": {
+    "message": "Daha uzun"
+  },
+  "removeBlock": {
+    "message": "Bu bloğu kaldır"
+  },
+  "minUnit": {
+    "message": "dk"
+  },
+  "stopClosing": {
+    "message": "$SITE$ kapatılmasın",
+    "placeholders": {
+      "site": {
+        "content": "$1"
+      }
+    }
+  },
+  "siteError": {
+    "message": "Sitenin adresini yazın, örneğin espn.com"
+  },
+  "totalEnds": {
+    "message": "$SPAN$ · $TIME$ bitiyor",
+    "placeholders": {
+      "span": {
+        "content": "$1"
+      },
+      "time": {
+        "content": "$2"
+      }
+    }
+  },
+  "blockOf": {
+    "message": "Blok $N$ / $TOTAL$",
+    "placeholders": {
+      "n": {
+        "content": "$1"
+      },
+      "total": {
+        "content": "$2"
+      }
+    }
+  },
+  "blockOfDone": {
+    "message": "Blok $N$ / $TOTAL$ tamam",
+    "placeholders": {
+      "n": {
+        "content": "$1"
+      },
+      "total": {
+        "content": "$2"
+      }
+    }
+  },
+  "pause": {
+    "message": "Mola"
+  },
+  "lastBlock": {
+    "message": "Oturumun son bloğu"
+  },
+  "sessionHeld": {
+    "message": "Oturum duraklatıldı"
+  },
+  "nextPauseThen": {
+    "message": "Sırada: $SPAN$ mola, ardından $TASK$",
+    "placeholders": {
+      "span": {
+        "content": "$1"
+      },
+      "task": {
+        "content": "$2"
+      }
+    }
+  },
+  "nextTaskSpan": {
+    "message": "Sırada: $TASK$ · $SPAN$",
+    "placeholders": {
+      "task": {
+        "content": "$1"
+      },
+      "span": {
+        "content": "$2"
+      }
+    }
+  },
+  "resume": {
+    "message": "Devam et"
+  },
+  "hold": {
+    "message": "Duraklat"
+  },
+  "finishedBlock": {
+    "message": "Bu bloğu bitirdim"
+  },
+  "endBreak": {
+    "message": "Molayı bitir"
+  },
+  "clickAgain": {
+    "message": "Durdurmak için tekrar tıklayın"
+  },
+  "notesForBreak_one": {
+    "message": "Mola için $COUNT$ not",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "notesForBreak_other": {
+    "message": "Mola için $COUNT$ not",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "done": {
+    "message": "Tamam"
+  },
+  "todayDone_one": {
+    "message": "Bugün: $COUNT$ blok tamam · $SPAN$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      },
+      "span": {
+        "content": "$2"
+      }
+    }
+  },
+  "todayDone_other": {
+    "message": "Bugün: $COUNT$ blok tamam · $SPAN$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      },
+      "span": {
+        "content": "$2"
+      }
+    }
+  },
+  "spanMin": {
+    "message": "$M$ dk",
+    "placeholders": {
+      "m": {
+        "content": "$1"
+      }
+    }
+  },
+  "spanHours": {
+    "message": "$H$ sa",
+    "placeholders": {
+      "h": {
+        "content": "$1"
+      }
+    }
+  },
+  "spanHoursMin": {
+    "message": "$H$ sa $M$ dk",
+    "placeholders": {
+      "h": {
+        "content": "$1"
+      },
+      "m": {
+        "content": "$2"
+      }
+    }
+  },
+  "openTimer": {
+    "message": "Zamanlayıcıyı aç"
+  },
+  "changeCorner": {
+    "message": "Köşe değiştir"
+  },
+  "fold": {
+    "message": "Daralt"
+  },
+  "pillPlaceholder": {
+    "message": "Bir fikir mi? Mola için not alın"
+  },
+  "blocksDone_one": {
+    "message": "$COUNT$ blok tamam",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "blocksDone_other": {
+    "message": "$COUNT$ blok tamam",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "announceEnd": {
+    "message": "Oturum bitti"
+  },
+  "announceBreakOver": {
+    "message": "Mola bitti"
+  },
+  "announceBlockDone": {
+    "message": "Blok tamam"
+  },
+  "errPageSilent": {
+    "message": "sayfa yanıt vermiyor"
+  },
+  "errTimerMissing": {
+    "message": "zamanlayıcı sayfaya yerleşmedi"
+  },
+  "tPinLater": {
+    "message": "Zamanlayıcı daha sonra açılan sayfalarda görünmeyecek"
+  },
+  "tAlarm": {
+    "message": "Oturum zamanlayıcısı kurulamadı"
+  },
+  "tBadge": {
+    "message": "Simgedeki sayı güncellenemedi"
+  },
+  "tTabs": {
+    "message": "Diğer sekmeler hazırlanamadı"
+  },
+  "tPinHere": {
+    "message": "Zamanlayıcı $PLACE$ üzerinde görünemiyor",
+    "placeholders": {
+      "place": {
+        "content": "$1"
+      }
+    }
+  },
+  "thisPage": {
+    "message": "bu sayfa"
+  },
+  "tFullscreen": {
+    "message": "Pencere tam ekrana geçemedi"
+  },
+  "nSessionOverBody_one": {
+    "message": "$COUNT$ blok tamam. Siteler yeniden açık.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "nSessionOverBody_other": {
+    "message": "$COUNT$ blok tamam. Siteler yeniden açık.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "nBreakTitle": {
+    "message": "Mola · $SPAN$",
+    "placeholders": {
+      "span": {
+        "content": "$1"
+      }
+    }
+  },
+  "nBreakBody": {
+    "message": "Blok tamam: $DONE$. Sırada: $NEXT$.",
+    "placeholders": {
+      "done": {
+        "content": "$1"
+      },
+      "next": {
+        "content": "$2"
+      }
+    }
+  },
+  "nBlockTitle": {
+    "message": "$TASK$ · $SPAN$",
+    "placeholders": {
+      "task": {
+        "content": "$1"
+      },
+      "span": {
+        "content": "$2"
+      }
+    }
+  },
+  "nBlockBody": {
+    "message": "Mola bitti. Blok $N$ / $TOTAL$.",
+    "placeholders": {
+      "n": {
+        "content": "$1"
+      },
+      "total": {
+        "content": "$2"
+      }
+    }
+  },
+  "defaultBlockName": {
+    "message": "Blok $N$",
+    "placeholders": {
+      "n": {
+        "content": "$1"
+      }
+    }
+  },
+  "closedDuring": {
+    "message": "$HOST$ · blok sırasında kapalı",
+    "placeholders": {
+      "host": {
+        "content": "$1"
+      }
+    }
+  },
+  "backTo": {
+    "message": "$HOST$ sitesine dön",
+    "placeholders": {
+      "host": {
+        "content": "$1"
+      }
+    }
+  },
+  "waitsForBreak": {
+    "message": "$HOST$ molayı bekliyor",
+    "placeholders": {
+      "host": {
+        "content": "$1"
+      }
+    }
+  },
+  "openingIn": {
+    "message": "$N$ sn içinde açılıyor · iptal için tıklayın",
+    "placeholders": {
+      "n": {
+        "content": "$1"
+      }
+    }
+  },
+  "needIt": {
+    "message": "Bu blok için buna ihtiyacım var"
+  },
+  "reopened": {
+    "message": "$HOST$ yeniden açık",
+    "placeholders": {
+      "host": {
+        "content": "$1"
+      }
+    }
+  },
+  "itsBreak": {
+    "message": "Mola zamanı"
+  },
+  "sessionOver": {
+    "message": "Oturum bitti"
+  },
+  "resumeWith": {
+    "message": "Dönüş: $TASK$",
+    "placeholders": {
+      "task": {
+        "content": "$1"
+      }
+    }
+  },
+  "blockedPlaceholder": {
+    "message": "Orada ne yapmak istiyordunuz? Mola için not alın"
+  },
+  "noted": {
+    "message": "Not alındı. Molada Focus balonunda bulacaksınız."
+  }
+}

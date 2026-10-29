@@ -1,0 +1,573 @@
+{
+  "extName": {
+    "message": "Focus"
+  },
+  "extDesc": {
+    "message": "جلسات عمل على شكل كتل: مهمة واحدة في كل مرة، استراحات ثابتة، علامة التبويب وحدها بملء الشاشة، ومؤقت يرافقك في كل صفحة."
+  },
+  "addBlock": {
+    "message": "إضافة كتلة"
+  },
+  "pauseBetween": {
+    "message": "استراحة بين الكتل"
+  },
+  "pauseLength": {
+    "message": "مدة الاستراحة"
+  },
+  "fullscreenOption": {
+    "message": "علامة التبويب وحدها، بملء الشاشة"
+  },
+  "blockingOption": {
+    "message": "إغلاق المواقع أثناء الكتل"
+  },
+  "addSitePlaceholder": {
+    "message": "أضف موقعًا، مثل espn.com"
+  },
+  "addSite": {
+    "message": "إضافة موقع"
+  },
+  "start": {
+    "message": "بدء الجلسة"
+  },
+  "laterPlaceholder": {
+    "message": "فكرة أو رغبة؟ دوّنها للاستراحة"
+  },
+  "noteForLater": {
+    "message": "تدوين لوقت لاحق"
+  },
+  "stop": {
+    "message": "إيقاف الجلسة"
+  },
+  "laterTitle": {
+    "message": "لإلقاء نظرة لاحقًا"
+  },
+  "firstTask": {
+    "message": "ما المهمة؟"
+  },
+  "nextTask": {
+    "message": "وبعد ذلك؟"
+  },
+  "blockTask": {
+    "message": "مهمة الكتلة $N$",
+    "placeholders": {
+      "n": {
+        "content": "$1"
+      }
+    }
+  },
+  "blockLength": {
+    "message": "مدة الكتلة $N$ بالدقائق",
+    "placeholders": {
+      "n": {
+        "content": "$1"
+      }
+    }
+  },
+  "shorter": {
+    "message": "أقصر"
+  },
+  "longer": {
+    "message": "أطول"
+  },
+  "removeBlock": {
+    "message": "إزالة هذه الكتلة"
+  },
+  "minUnit": {
+    "message": "د"
+  },
+  "stopClosing": {
+    "message": "التوقف عن إغلاق $SITE$",
+    "placeholders": {
+      "site": {
+        "content": "$1"
+      }
+    }
+  },
+  "siteError": {
+    "message": "اكتب عنوان الموقع، مثل espn.com"
+  },
+  "totalEnds": {
+    "message": "$SPAN$ · تنتهي الساعة $TIME$",
+    "placeholders": {
+      "span": {
+        "content": "$1"
+      },
+      "time": {
+        "content": "$2"
+      }
+    }
+  },
+  "blockOf": {
+    "message": "الكتلة $N$ من $TOTAL$",
+    "placeholders": {
+      "n": {
+        "content": "$1"
+      },
+      "total": {
+        "content": "$2"
+      }
+    }
+  },
+  "blockOfDone": {
+    "message": "انتهت الكتلة $N$ من $TOTAL$",
+    "placeholders": {
+      "n": {
+        "content": "$1"
+      },
+      "total": {
+        "content": "$2"
+      }
+    }
+  },
+  "pause": {
+    "message": "استراحة"
+  },
+  "lastBlock": {
+    "message": "آخر كتلة في الجلسة"
+  },
+  "sessionHeld": {
+    "message": "الجلسة متوقفة مؤقتًا"
+  },
+  "nextPauseThen": {
+    "message": "التالي: استراحة $SPAN$، ثم $TASK$",
+    "placeholders": {
+      "span": {
+        "content": "$1"
+      },
+      "task": {
+        "content": "$2"
+      }
+    }
+  },
+  "nextTaskSpan": {
+    "message": "التالي: $TASK$ · $SPAN$",
+    "placeholders": {
+      "task": {
+        "content": "$1"
+      },
+      "span": {
+        "content": "$2"
+      }
+    }
+  },
+  "resume": {
+    "message": "متابعة"
+  },
+  "hold": {
+    "message": "إيقاف مؤقت"
+  },
+  "finishedBlock": {
+    "message": "أنهيت هذه الكتلة"
+  },
+  "endBreak": {
+    "message": "إنهاء الاستراحة"
+  },
+  "clickAgain": {
+    "message": "انقر مرة أخرى للإيقاف"
+  },
+  "notesForBreak_zero": {
+    "message": "لا ملاحظات للاستراحة",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "notesForBreak_one": {
+    "message": "ملاحظة واحدة للاستراحة",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "notesForBreak_two": {
+    "message": "ملاحظتان للاستراحة",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "notesForBreak_few": {
+    "message": "$COUNT$ ملاحظات للاستراحة",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "notesForBreak_many": {
+    "message": "$COUNT$ ملاحظة للاستراحة",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "notesForBreak_other": {
+    "message": "$COUNT$ ملاحظة للاستراحة",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "done": {
+    "message": "تم"
+  },
+  "todayDone_zero": {
+    "message": "اليوم: لم تنتهِ أي كتلة · $SPAN$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      },
+      "span": {
+        "content": "$2"
+      }
+    }
+  },
+  "todayDone_one": {
+    "message": "اليوم: انتهت كتلة واحدة · $SPAN$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      },
+      "span": {
+        "content": "$2"
+      }
+    }
+  },
+  "todayDone_two": {
+    "message": "اليوم: انتهت كتلتان · $SPAN$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      },
+      "span": {
+        "content": "$2"
+      }
+    }
+  },
+  "todayDone_few": {
+    "message": "اليوم: انتهت $COUNT$ كتل · $SPAN$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      },
+      "span": {
+        "content": "$2"
+      }
+    }
+  },
+  "todayDone_many": {
+    "message": "اليوم: انتهت $COUNT$ كتلة · $SPAN$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      },
+      "span": {
+        "content": "$2"
+      }
+    }
+  },
+  "todayDone_other": {
+    "message": "اليوم: انتهت $COUNT$ كتلة · $SPAN$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      },
+      "span": {
+        "content": "$2"
+      }
+    }
+  },
+  "spanMin": {
+    "message": "$M$ د",
+    "placeholders": {
+      "m": {
+        "content": "$1"
+      }
+    }
+  },
+  "spanHours": {
+    "message": "$H$ س",
+    "placeholders": {
+      "h": {
+        "content": "$1"
+      }
+    }
+  },
+  "spanHoursMin": {
+    "message": "$H$ س $M$ د",
+    "placeholders": {
+      "h": {
+        "content": "$1"
+      },
+      "m": {
+        "content": "$2"
+      }
+    }
+  },
+  "openTimer": {
+    "message": "فتح المؤقت"
+  },
+  "changeCorner": {
+    "message": "تغيير الزاوية"
+  },
+  "fold": {
+    "message": "طي"
+  },
+  "pillPlaceholder": {
+    "message": "فكرة؟ دوّنها للاستراحة"
+  },
+  "blocksDone_zero": {
+    "message": "لم تنتهِ أي كتلة",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "blocksDone_one": {
+    "message": "انتهت كتلة واحدة",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "blocksDone_two": {
+    "message": "انتهت كتلتان",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "blocksDone_few": {
+    "message": "انتهت $COUNT$ كتل",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "blocksDone_many": {
+    "message": "انتهت $COUNT$ كتلة",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "blocksDone_other": {
+    "message": "انتهت $COUNT$ كتلة",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "announceEnd": {
+    "message": "انتهت الجلسة"
+  },
+  "announceBreakOver": {
+    "message": "انتهت الاستراحة"
+  },
+  "announceBlockDone": {
+    "message": "انتهت الكتلة"
+  },
+  "errPageSilent": {
+    "message": "الصفحة لا تستجيب"
+  },
+  "errTimerMissing": {
+    "message": "لم يُثبَّت المؤقت في الصفحة"
+  },
+  "tPinLater": {
+    "message": "لن يظهر المؤقت في الصفحات المفتوحة لاحقًا"
+  },
+  "tAlarm": {
+    "message": "تعذّر ضبط مؤقت الجلسة"
+  },
+  "tBadge": {
+    "message": "تعذّر تحديث الرقم على الأيقونة"
+  },
+  "tTabs": {
+    "message": "تعذّر تجهيز علامات التبويب الأخرى"
+  },
+  "tPinHere": {
+    "message": "لا يمكن إظهار المؤقت في $PLACE$",
+    "placeholders": {
+      "place": {
+        "content": "$1"
+      }
+    }
+  },
+  "thisPage": {
+    "message": "هذه الصفحة"
+  },
+  "tFullscreen": {
+    "message": "تعذّر على النافذة الانتقال إلى ملء الشاشة"
+  },
+  "nSessionOverBody_zero": {
+    "message": "لم تنتهِ أي كتلة. المواقع مفتوحة من جديد.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "nSessionOverBody_one": {
+    "message": "انتهت كتلة واحدة. المواقع مفتوحة من جديد.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "nSessionOverBody_two": {
+    "message": "انتهت كتلتان. المواقع مفتوحة من جديد.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "nSessionOverBody_few": {
+    "message": "انتهت $COUNT$ كتل. المواقع مفتوحة من جديد.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "nSessionOverBody_many": {
+    "message": "انتهت $COUNT$ كتلة. المواقع مفتوحة من جديد.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "nSessionOverBody_other": {
+    "message": "انتهت $COUNT$ كتلة. المواقع مفتوحة من جديد.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "nBreakTitle": {
+    "message": "استراحة · $SPAN$",
+    "placeholders": {
+      "span": {
+        "content": "$1"
+      }
+    }
+  },
+  "nBreakBody": {
+    "message": "انتهت الكتلة: $DONE$. التالي: $NEXT$.",
+    "placeholders": {
+      "done": {
+        "content": "$1"
+      },
+      "next": {
+        "content": "$2"
+      }
+    }
+  },
+  "nBlockTitle": {
+    "message": "$TASK$ · $SPAN$",
+    "placeholders": {
+      "task": {
+        "content": "$1"
+      },
+      "span": {
+        "content": "$2"
+      }
+    }
+  },
+  "nBlockBody": {
+    "message": "انتهت الاستراحة. الكتلة $N$ من $TOTAL$.",
+    "placeholders": {
+      "n": {
+        "content": "$1"
+      },
+      "total": {
+        "content": "$2"
+      }
+    }
+  },
+  "defaultBlockName": {
+    "message": "الكتلة $N$",
+    "placeholders": {
+      "n": {
+        "content": "$1"
+      }
+    }
+  },
+  "closedDuring": {
+    "message": "$HOST$ · مغلق أثناء الكتلة",
+    "placeholders": {
+      "host": {
+        "content": "$1"
+      }
+    }
+  },
+  "backTo": {
+    "message": "العودة إلى $HOST$",
+    "placeholders": {
+      "host": {
+        "content": "$1"
+      }
+    }
+  },
+  "waitsForBreak": {
+    "message": "$HOST$ ينتظر الاستراحة",
+    "placeholders": {
+      "host": {
+        "content": "$1"
+      }
+    }
+  },
+  "openingIn": {
+    "message": "سيُفتح خلال $N$ ث · انقر للإلغاء",
+    "placeholders": {
+      "n": {
+        "content": "$1"
+      }
+    }
+  },
+  "needIt": {
+    "message": "أحتاجه لهذه الكتلة"
+  },
+  "reopened": {
+    "message": "$HOST$ مفتوح من جديد",
+    "placeholders": {
+      "host": {
+        "content": "$1"
+      }
+    }
+  },
+  "itsBreak": {
+    "message": "حان وقت الاستراحة"
+  },
+  "sessionOver": {
+    "message": "انتهت الجلسة"
+  },
+  "resumeWith": {
+    "message": "العودة إلى: $TASK$",
+    "placeholders": {
+      "task": {
+        "content": "$1"
+      }
+    }
+  },
+  "blockedPlaceholder": {
+    "message": "ماذا كنت تريد أن تفعل هناك؟ دوّنه للاستراحة"
+  },
+  "noted": {
+    "message": "تم التدوين. ستجده في الاستراحة، في فقاعة Focus."
+  }
+}
